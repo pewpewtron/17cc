@@ -5,13 +5,13 @@ ITCC 2018
 @endsection
 
 @section('head')
-<!-- Template Timeline -->
+{{-- <!-- Template Timeline -->
 <link rel="stylesheet" href="{{asset('asset1/timeline/css/reset.css')}}"> <!-- CSS reset -->
 <link rel="stylesheet" href="{{asset('asset1/timeline/css/style.css')}}"> <!-- Resource style -->
 <script src="{{asset('asset1/timeline/js/modernizr.js')}}"></script> <!-- Modernizr -->
 <!--script src="{{asset('asset1/timeline/js/jquery-2.1.4.js')}}"></script>
 <script src="{{asset('asset1/timeline/js/jquery.mobile.custom.min.js')}}"></script-->
-<script src="{{asset('asset1/timeline/js/main.js')}}"></script> <!-- Resource jQuery -->
+<script src="{{asset('asset1/timeline/js/main.js')}}"></script> <!-- Resource jQuery --> --}}
 @endsection
 
 @section('navbar')
@@ -247,7 +247,7 @@ ITCC 2018
 <!--==========================
       Jadwal
 ============================-->
-<section id="jadwal" class="cd-horizontal-timeline wow fadeInUp" style="background-color: #fff; padding-top: 40px; padding-bottom: 60px; margin-top: 0px;">
+{{-- <section id="jadwal" class="cd-horizontal-timeline wow fadeInUp" style="background-color: #fff; padding-top: 40px; padding-bottom: 60px; margin-top: 0px;">
     <div class="section-header">
           <h3 class="section-title">Jadwal ITCC 2018</h3>
     </div>
@@ -473,7 +473,7 @@ ITCC 2018
 	      	
     	</ol>
   	</div> <!-- .events-content -->
-</section>
+</section> --}}
 
 <!--==========================
       Contact Section
