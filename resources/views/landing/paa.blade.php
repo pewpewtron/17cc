@@ -5,13 +5,15 @@ Pengembangan Aplikasi Android - ITCC 2018
 @endsection
 
 @section('head')
-<!-- Template Timeline -->
+{{--<!-- Template Timeline -->
 <link rel="stylesheet" href="{{asset('asset1/timeline/css/reset.css')}}"> <!-- CSS reset -->
 <link rel="stylesheet" href="{{asset('asset1/timeline/css/style.css')}}"> <!-- Resource style -->
 <script src="{{asset('asset1/timeline/js/modernizr.js')}}"></script> <!-- Modernizr -->
 <script src="{{asset('asset1/timeline/js/jquery-2.1.4.js')}}"></script>
 <script src="{{asset('asset1/timeline/js/jquery.mobile.custom.min.j')}}s"></script>
-<script src="{{asset('asset1/timeline/js/main.js')}}"></script> <!-- Resource jQuery -->
+<script src="{{asset('asset1/timeline/js/main.js')}}"></script> <!-- Resource jQuery -->--}}
+
+<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 @endsection
 
 @section('navbar')
@@ -154,7 +156,146 @@ Pengembangan Aplikasi Android - ITCC 2018
 <!--==========================
       Jadwal Section
 ============================-->
-<section id="jadwal" class="cd-horizontal-timeline wow fadeInUp" style="background-color: #f7f7f7; padding-top: 80px; padding-bottom: 60px;">
+<section id="jadwal" class="wow fadeIn">
+	<div class="demo">
+		<div class="container">
+			
+			<div class="section-header">
+				<h3 class="section-title">jadwal</h3>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="main-timeline">
+						
+						<div class="timeline wow fadeInLeft">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">1<sup>st</sup></span>
+    								<span class="month">Agust</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Pembukaan Pendaftaran</h2>
+    							<p class="description text-center">Pembukaan pendaftaran dan submisi tahap 1</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInRight">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">31<sup>st</sup></span>
+    								<span class="month">Agust</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Penutupan Pendaftaran</h2>
+    							<p class="description text-center">Penutupan pendaftaran lomba</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInLeft">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">19<sup>th</sup></span>
+    								<span class="month">Sept</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Batas Akhir Submisi Tahap 1</h2>
+    							<p class="description text-center">Batas akhir pengumpulan submisi tahap 1</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInRight">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">26<sup>th</sup></span>
+    								<span class="month">Sept</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Pengumuman Hasil Submisi Tahap 1</h2>
+    							<p class="description text-center">Pengumuman tim yang lolos ke tahap selanjutnya</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInLeft">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">27<sup>th</sup></span>
+    								<span class="month">Sept</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Pembukaan Submisi Tahap 2</h2>
+    							<p class="description text-center">Pembukaan pengumpulan submisi tahap 2</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInRight">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">11<sup>st</sup></span>
+    								<span class="month">Okt</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Batas Akhir Submisi Tahap 2</h2>
+    							<p class="description text-center">Batas akhir pengumpulan submisi tahap 2</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInLeft">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">23<sup>rd</sup></span>
+    								<span class="month">Okt</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Pengumuman Finalis</h2>
+    							<p class="description text-center">Pengumuman tim yang lolos ke babak final</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInRight">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">30<sup>th</sup></span>
+    								<span class="month">Okt</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Technical Meeting</h2>
+    							<p class="description text-center">Pelaksanaan technical meeting</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInLeft">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">1<sup>st</sup></span>
+    								<span class="month">Nov</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Hari Pertama ITCC 2018</h2>
+    							<p class="description text-center">Babak Final</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInRight">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">2<sup>nd</sup></span>
+    								<span class="month">Nov</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Hari Kedua ITCC 2018</h2>
+    							<p class="description text-center">Expo dan penyerahan hadiah</p>
+    						</div>
+    					</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+{{--<section id="jadwal" class="cd-horizontal-timeline wow fadeInUp" style="background-color: #f7f7f7; padding-top: 80px; padding-bottom: 60px;">
     <div class="section-header">
           <h3 class="section-title">Jadwal</h3>
     </div>
@@ -259,7 +400,7 @@ Pengembangan Aplikasi Android - ITCC 2018
 
     	</ol>
   	</div> <!-- .events-content -->
-</section>
+</section>--}}
 
 <!--==========================
       Lomba Lain Section
@@ -279,8 +420,8 @@ Pengembangan Aplikasi Android - ITCC 2018
 			          	<div class="icon col-sm-3">
 			          		<img src="{{asset('asset1/images/logo_web_100.png')}}" style="padding-right: 20px;">
 			          	</div>
-			          	<div class="col-sm-9">
-				          	<h4 class="">Desain Web</h4>
+			          	<div class="col-sm-9" style="padding-bottom: 26px;">
+				          	<h4 class="title">Desain Web</h4>
 				          	<p class="justify">Cabang Lomba <b>Desain Web</b> diperuntukan kepada siswa SMA/SMK Sederajat se-Bali. Biaya Pendaftaran mulai Rp. 75.000,-</p>
 				          	<a href="/landing/desainWeb" class="btn-get-started">Selengkapnya</a>
 			          	</div>

@@ -51,7 +51,7 @@
                             <dd>Lokasi lomba akan diadakan di kampus Teknologi Informasi Udayana Bukit, Jimbaran. (<a target="_blank" href="#" style="color: #021b79;">Google Maps</a>)</dd>
                             
                             <dt>Kalangan yang dapat Mengikuti Kategori Lomba Umum</dt>
-                            <dd>Pada kategori lomba umum dibatasi dengan usia maksimal 28 tahun.</dd>
+                            <dd>Pada kategori lomba umum dibatasi dengan usia maksimal 24 tahun.</dd>
                             
                             <dt>Hadiah Jalan-Jalan di Bali</dt>
                             <dd>Hadiah jalan-jalan di Bali hanya berlaku bagi pemenang lomba Pengembangan Ide Bisnis TIK dan Pengembangan Aplikasi Android.</dd>

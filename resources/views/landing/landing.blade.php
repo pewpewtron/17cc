@@ -12,6 +12,8 @@ ITCC 2018
 <!--script src="{{asset('asset1/timeline/js/jquery-2.1.4.js')}}"></script>
 <script src="{{asset('asset1/timeline/js/jquery.mobile.custom.min.js')}}"></script-->
 <script src="{{asset('asset1/timeline/js/main.js')}}"></script> <!-- Resource jQuery --> --}}
+
+<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 @endsection
 
 @section('navbar')
@@ -21,15 +23,15 @@ ITCC 2018
 <li><a href="#informasi">Informasi</a></li>
 <li><a href="#jadwal">Jadwal</a></li>
 <li><a href="#contact">Kontak</a></li>
-<li class="menu-has-children"><a href="#">Pendaftaran</a>
-  	<ul>
-    	<li><a href="/daftar/pemrograman">Lomba Pemrograman</a></li>
-    	<li><a href="/daftar/desainweb">Lomba Desan Web</a></li>
-    	<li><a href="/daftar/cerdascermat">Lomba Cerdas Cermat</a></li>
-    	<li><a href="/daftar/android">Lomba Pengembangan Aplikasi Android</a></li>
-    	<li><a href="/daftar/idebisnis">Lomba Pengembangan Ide Bisnis TIK</a></li>
-  	</ul>
-</li>
+{{--<li class="menu-has-children"><a href="#">Pendaftaran</a>
+    <ul>
+      <li><a href="/daftar/pemrograman">Lomba Pemrograman</a></li>
+      <li><a href="/daftar/desainweb">Lomba Desan Web</a></li>
+      <li><a href="/daftar/cerdascermat">Lomba Cerdas Cermat</a></li>
+      <li><a href="/daftar/android">Lomba Pengembangan Aplikasi Android</a></li>
+      <li><a href="/daftar/idebisnis">Lomba Pengembangan Ide Bisnis TIK</a></li>
+    </ul>
+</li>--}}
 {{--<li><a href="/login">Masuk</a></li>--}}
 <li><a href="/faq">FAQ</a></li>
 @endsection
@@ -247,6 +249,327 @@ ITCC 2018
 <!--==========================
       Jadwal
 ============================-->
+<section id="jadwal" class="wow fadeIn">
+  
+  <div class="demo">
+    <div class="container">
+
+      <div class="section-header">
+        <h3 class="section-title">Jadwal ITCC 2018</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="main-timeline">
+            
+            <div class="timeline wow fadeInLeft">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">1<sup>st</sup></span>
+                  <span class="month">Agust</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Pembukaan Pendaftaran</h2>
+                <p class="description text-center" style="font-size: 15px;"> 
+                    <span class="badge badge-info">Desain Web</span>
+                    <span class="badge badge-info">Cerdas Cermat</span>
+                    <span class="badge badge-info">Pemrograman</span>
+                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
+                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">Pembukaan pendaftaran gelombang 1 untuk cabang lomba kategori SMA/SMK dan Pembukaan pendaftaran untuk cabang lomba kategori Mahasiswa/Umum.</p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">31<sup>st</sup></span>
+                  <span class="month">Agust</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Penutupan Pendaftaran</h2>
+                <p class="description text-center" style="font-size: 15px;"> 
+                    <span class="badge badge-info">Desain Web</span>
+                    <span class="badge badge-info">Cerdas Cermat</span>
+                    <span class="badge badge-info">Pemrograman</span>
+                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
+                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">
+                  Penutupan pendaftaran lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>Penutupan pendaftaran gelombang 1 lomba kategori SMA/SMK/Sederajat se-Bali
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInLeft">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">1<sup>st</sup></span>
+                  <span class="month">Sept</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Pembukaan Pendaftaran Gelombang 2</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Desain Web</span>
+                  <span class="badge badge-info">Cerdas Cermat</span>
+                  <span class="badge badge-info">Pemrograman</span>
+                </p>
+                <p class="description text-center">
+                  Pembukaan pendaftaran gelombang 2 lomba kategori SMA/SMK/Sederajat se-Bali
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">19<sup>th</sup></span>
+                  <span class="month">Sept</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Batas Akhir Pengumpulan Berkas</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                  <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
+                </p>
+                <p class="description text-center">
+                  Batas akhir pengumpulan submisi tahap 1 cabang lomba <b>Pengembangan Aplikasi Android</b> <br> Batas akhir pengumpulan proposal cabang lomba <b>Pengembangan Ide Bisnis TIK</b>
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInLeft">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">26<sup>th</sup></span>
+                  <span class="month">Sept</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Pengumuman Submisi Tahap 1</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">
+                  Pengumuman Hasil Submisi Tahap 1 Cabang Lomba Kategori Perguruan Tinggi dan Umum
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">27<sup>th</sup></span>
+                  <span class="month">Sept</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Pembukaan Submisi Tahap 2</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">
+                  Pembukaan pengumpulan submisi tahap 2 cabang lomba Pengembangan Aplikasi Android
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInLeft">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">30<sup>th</sup></span>
+                  <span class="month">Sept</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Penutupan Pendaftaran Gelombang 2</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Desain Web</span>
+                  <span class="badge badge-info">Cerdas Cermat</span>
+                  <span class="badge badge-info">Pemrograman</span>
+                </p>
+                <p class="description text-center">
+                  Penutupan pendaftaran gelombang 2 lomba kategori SMA/SMK/Sederajat se-Bali
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">11<sup>th</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Batas Akhir Pengumpulan Berkas</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">
+                  Batas akhir pengumpulan submisi tahap 2 cabang lomba Pengembangan Aplikasi Android
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInLeft">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">12<sup>th</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Warming Up</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pemrograman</span>
+                </p>
+                <p class="description text-center">
+                  Warming up hari pertama cabang lomba Pemrograman kategori SMA/SMK/Sederajat se-Bali
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">14<sup>th</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Pengumuman Finalis</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
+                </p>
+                <p class="description text-center">
+                  Pengumuman finalis cabang lomba Pengembangan Ide Bisnis TIK kategori Umum se-Indonesia
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInLeft">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">19<sup>th</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Warming Up</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pemrograman</span>
+                </p>
+                <p class="description text-center">
+                  Warming up hari terakhir cabang lomba Pemrograman kategori SMA/SMK/Sederajat se-Bali
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">23<sup>th</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Pengumuman Finalis</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">
+                  Pengumuman finalis cabang lomba Pengembangan Aplikasi Android kategori Perguruan Tinggi se-Indonesia
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInLeft">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">28<sup>th</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Technical Meeting</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Desain Web</span>
+                  <span class="badge badge-info">Cerdas Cermat</span>
+                  <span class="badge badge-info">Pemrograman</span>
+                </p>
+                <p class="description text-center">
+                  Technical Meeting lomba kategori SMA/SMK/Sederajat se-Bali
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">30<sup>th</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Technical Meeting</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                  <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
+                </p>
+                <p class="description text-center">
+                  Technical Meeting lomba kategori Umum dan Perguruan Tinggi se-Indonesia
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInLeft">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">1<sup>st</sup></span>
+                  <span class="month">Nov</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Hari H Pertama ITCC 2018</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
+                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                    <span class="badge badge-info">Pemrograman</span>
+                    <span class="badge badge-info">Desain Web</span>
+                    <span class="badge badge-info">Cerdas Cermat</span>
+                </p>
+                <p class="description text-center">
+                  Babak final cabang lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>
+                  Babak penyisihan bagi cabang lomba <b>Pemrograman</b> dan <b>Desain Web</b> kategori SMA/SMK/Sederajat se-Bali<br>
+                  Babak penyisihan serta semifinal 1 dan 2 bagi cabang lomba <b>Cerdas Cermat</b> kategori SMA/SMK/Sederajat se-Bali
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">2<sup>nd</sup></span>
+                  <span class="month">Nov</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Hari H Kedua ITCC 2018</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
+                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                    <span class="badge badge-info">Pemrograman</span>
+                    <span class="badge badge-info">Desain Web</span>
+                    <span class="badge badge-info">Cerdas Cermat</span>
+                </p>
+                <p class="description text-center">
+                  Expo cabang lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>
+                  Babak final bagi cabang lomba <b>Pemrograman</b> dan <b>Desain Web</b> kategori SMA/SMK/Sederajat se-Bali<br>
+                  Babak semifinal 3 dan 4 serta final bagi cabang lomba <b>Cerdas Cermat</b> kategori SMA/SMK/Sederajat se-Bali<br>
+                  Penyerahan hadiah bagi cabang lomba kategori SMA/SMK/Sederajat serta Perguruan Tinggi dan Umum
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
 {{-- <section id="jadwal" class="cd-horizontal-timeline wow fadeInUp" style="background-color: #fff; padding-top: 40px; padding-bottom: 60px; margin-top: 0px;">
     <div class="section-header">
           <h3 class="section-title">Jadwal ITCC 2018</h3>
