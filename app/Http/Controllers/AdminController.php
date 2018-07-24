@@ -12,6 +12,7 @@ use App\UserMessageTemporary;
 use App\Jury;
 use Carbon\Carbon;
 use App\Competition;
+use App\Notifications\NotifToInboxAfterVerification;
 
 class AdminController extends Controller
 {
@@ -113,9 +114,20 @@ class AdminController extends Controller
                     'groups.verified',
                     'competitions.regist_cost',
                     DB::raw('sum(IFNULL(shirts.price,0)) as shirt_total'))
+            ->where('groups.competition_id','=',Auth::user()->competition_id)
             ->where('groups.verified','!=',1)
             ->orWhereNull('groups.verified')
-            ->groupBy('group_id')
+            ->groupBy('verified_reqs.group_id',
+                        'verified_reqs.id',
+                        'verified_reqs.request_at',
+                        'verified_reqs.filename',
+                        'verified_reqs.note',
+                        'verified_reqs.created_at',
+                        'verified_reqs.updated_at',
+                        'groups.group_name',
+                        'groups.institution', 
+                        'groups.verified',
+                        'competitions.regist_cost' )
             ->get();
 
         $dir_file = Verified_req::$dir_verifikasi;
