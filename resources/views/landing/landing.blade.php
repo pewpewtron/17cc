@@ -43,7 +43,7 @@ ITCC 2018
 <section id="hero">
     <div class="container">
 
-      	<div class="row" style="padding-top: 170px;">
+      	<div class="row padding-hero">
         	<div class="col-lg-8 wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="500ms">
           		<h1>Powering Smart Society with Information Technology</h1>
               

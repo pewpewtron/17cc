@@ -30,6 +30,28 @@
   }
 }
 
+.padding-hero {
+  padding-top: 170px;
+}
+
+@media only screen and (max-width: 600px) {
+  .padding-hero, {
+    padding-top: 70px !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .padding-hero {
+    padding-top: 72px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .padding-hero, {
+    padding-top: 0px !important;
+  }
+}
+
 .all-shadow {
   box-shadow: 0 0 5px #000;
 }
