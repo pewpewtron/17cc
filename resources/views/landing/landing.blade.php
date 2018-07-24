@@ -297,7 +297,7 @@ ITCC 2018
                     <span class="badge badge-info">Pengembangan Aplikasi Android</span>
                 </p>
                 <p class="description text-center">
-                  Penutupan pendaftaran lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>Penutupan pendaftaran gelombang 1 lomba kategori SMA/SMK/Sederajat se-Bali
+                  Penutupan pendaftaran lomba kategori Mahasiswa dan Umum se-Indonesia<br>Penutupan pendaftaran gelombang 1 lomba kategori SMA/SMK/Sederajat se-Bali
                 </p>
               </div>
             </div>
@@ -351,7 +351,7 @@ ITCC 2018
                   <span class="badge badge-info">Pengembangan Aplikasi Android</span>
                 </p>
                 <p class="description text-center">
-                  Pengumuman Hasil Submisi Tahap 1 Cabang Lomba Kategori Perguruan Tinggi dan Umum
+                  Pengumuman Hasil Submisi Tahap 1 Cabang Lomba Kategori Mahasiswa dan Umum
                 </p>
               </div>
             </div>
@@ -472,7 +472,7 @@ ITCC 2018
                   <span class="badge badge-info">Pengembangan Aplikasi Android</span>
                 </p>
                 <p class="description text-center">
-                  Pengumuman finalis cabang lomba Pengembangan Aplikasi Android kategori Perguruan Tinggi se-Indonesia
+                  Pengumuman finalis cabang lomba Pengembangan Aplikasi Android kategori Mahasiswa se-Indonesia
                 </p>
               </div>
             </div>
@@ -509,7 +509,7 @@ ITCC 2018
                   <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                 </p>
                 <p class="description text-center">
-                  Technical Meeting lomba kategori Umum dan Perguruan Tinggi se-Indonesia
+                  Technical Meeting lomba kategori Umum dan Mahasiswa se-Indonesia
                 </p>
               </div>
             </div>
@@ -530,7 +530,7 @@ ITCC 2018
                     <span class="badge badge-info">Cerdas Cermat</span>
                 </p>
                 <p class="description text-center">
-                  Babak final cabang lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>
+                  Babak final cabang lomba kategori Mahasiswa dan Umum se-Indonesia<br>
                   Babak penyisihan bagi cabang lomba <b>Pemrograman</b> dan <b>Desain Web</b> kategori SMA/SMK/Sederajat se-Bali<br>
                   Babak penyisihan serta semifinal 1 dan 2 bagi cabang lomba <b>Cerdas Cermat</b> kategori SMA/SMK/Sederajat se-Bali
                 </p>
@@ -553,10 +553,10 @@ ITCC 2018
                     <span class="badge badge-info">Cerdas Cermat</span>
                 </p>
                 <p class="description text-center">
-                  Expo cabang lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>
+                  Expo cabang lomba kategori Mahasiswa dan Umum se-Indonesia<br>
                   Babak final bagi cabang lomba <b>Pemrograman</b> dan <b>Desain Web</b> kategori SMA/SMK/Sederajat se-Bali<br>
                   Babak semifinal 3 dan 4 serta final bagi cabang lomba <b>Cerdas Cermat</b> kategori SMA/SMK/Sederajat se-Bali<br>
-                  Penyerahan hadiah bagi cabang lomba kategori SMA/SMK/Sederajat serta Perguruan Tinggi dan Umum
+                  Penyerahan hadiah bagi cabang lomba kategori SMA/SMK/Sederajat serta Mahasiswa dan Umum
                 </p>
               </div>
             </div>
@@ -635,7 +635,7 @@ ITCC 2018
                 <span class="badge badge-info">Pemrograman</span>
             </p>
             <p>
-              Penutupan pendaftaran lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>Penutupan pendaftaran gelombang 1 lomba kategori SMA/SMK/Sederajat se-Bali
+              Penutupan pendaftaran lomba kategori Mahasiswa dan Umum se-Indonesia<br>Penutupan pendaftaran gelombang 1 lomba kategori SMA/SMK/Sederajat se-Bali
             </p>
           </center>
         </li>
@@ -653,7 +653,7 @@ ITCC 2018
 
 		    <li data-date="19/09/2018">
 		    	<center>
-		          	<h2 style="color: #000; font-size: 30px;">Batas Akhir Pengumpulan Submisi Tahap 1 Cabang Lomba Kategori Perguruan Tinggi dan Umum</h2>
+		          	<h2 style="color: #000; font-size: 30px;">Batas Akhir Pengumpulan Submisi Tahap 1 Cabang Lomba Kategori Mahasiswa dan Umum</h2>
                 <p style="font-size: 15px;">
                     <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                     <span class="badge badge-info">Pengembangan Aplikasi Android</span>
@@ -663,7 +663,7 @@ ITCC 2018
 
         <li data-date="26/09/2018">
           <center>
-                <h2 style="color: #000; font-size: 30px;">Pengumuman Hasil Submisi Tahap 1 Cabang Lomba Kategori Perguruan Tinggi dan Umum</h2>
+                <h2 style="color: #000; font-size: 30px;">Pengumuman Hasil Submisi Tahap 1 Cabang Lomba Kategori Mahasiswa dan Umum</h2>
                 <p style="font-size: 15px;">
                     <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                     <span class="badge badge-info">Pengembangan Aplikasi Android</span>
@@ -673,7 +673,7 @@ ITCC 2018
 
         <li data-date="27/09/2018">
           <center>
-                <h2 style="color: #000; font-size: 30px;">Pembukaan Submisi Tahap 2 Cabang Lomba Kategori Perguruan Tinggi dan Umum</h2>
+                <h2 style="color: #000; font-size: 30px;">Pembukaan Submisi Tahap 2 Cabang Lomba Kategori Mahasiswa dan Umum</h2>
                 <p style="font-size: 15px;">
                     <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                     <span class="badge badge-info">Pengembangan Aplikasi Android</span>
@@ -694,7 +694,7 @@ ITCC 2018
 
         <li data-date="11/10/2018">
           <center>
-                <h2 style="color: #000; font-size: 30px;">Batas Akhir Pengumpulan Submisi Tahap 2 Cabang Lomba Kategori Perguruan Tinggi dan Umum</h2>
+                <h2 style="color: #000; font-size: 30px;">Batas Akhir Pengumpulan Submisi Tahap 2 Cabang Lomba Kategori Mahasiswa dan Umum</h2>
                 <p style="font-size: 15px;">
                     <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                     <span class="badge badge-info">Pengembangan Aplikasi Android</span>
@@ -752,7 +752,7 @@ ITCC 2018
                     <span class="badge badge-info">Pengembangan Aplikasi Android</span>
                 </p>
                 <p>
-                  Pelaksanaan <i>Technical Meeting</i> bagi cabang lomba kategori Perguruan Tinggi dan Umum se-Indonesia
+                  Pelaksanaan <i>Technical Meeting</i> bagi cabang lomba kategori Mahasiswa dan Umum se-Indonesia
                 </p>
             </center>
         </li>
@@ -768,7 +768,7 @@ ITCC 2018
                     <span class="badge badge-info">Cerdas Cermat</span>
                 </p>
                 <p>
-                  Babak final cabang lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>
+                  Babak final cabang lomba kategori Mahasiswa dan Umum se-Indonesia<br>
                   Babak penyisihan bagi cabang lomba <b>Pemrograman</b> dan <b>Desain Web</b> kategori SMA/SMK/Sederajat se-Bali<br>
                   Babak penyisihan serta semifinal 1 dan 2 bagi cabang lomba <b>Cerdas Cermat</b> kategori SMA/SMK/Sederajat se-Bali
                 </p>
@@ -786,10 +786,10 @@ ITCC 2018
                     <span class="badge badge-info">Cerdas Cermat</span>
                 </p>
                 <p>
-                  Expo cabang lomba kategori Perguruan Tinggi dan Umum se-Indonesia<br>
+                  Expo cabang lomba kategori Mahasiswa dan Umum se-Indonesia<br>
                   Babak final bagi cabang lomba <b>Pemrograman</b> dan <b>Desain Web</b> kategori SMA/SMK/Sederajat se-Bali<br>
                   Babak semifinal 3 dan 4 serta final bagi cabang lomba <b>Cerdas Cermat</b> kategori SMA/SMK/Sederajat se-Bali<br>
-                  Penyerahan hadiah bagi cabang lomba kategori SMA/SMK/Sederajat serta Perguruan Tinggi dan Umum
+                  Penyerahan hadiah bagi cabang lomba kategori SMA/SMK/Sederajat serta Mahasiswa dan Umum
                 </p>
             </center>
         </li>
