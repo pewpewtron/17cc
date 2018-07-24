@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Input as input;
 use Illuminate\Support\Facades\Hash;
 use App\Group;
 use App\Shirt;
+use Validator;
 
 class DashboardController extends Controller
 {
@@ -69,7 +70,7 @@ class DashboardController extends Controller
             ->get();
 
         // return $jumlah;
-
+        
         $jumlahPesan = AdminMessageTemporary::where('group_id','=', Auth::user()->id)
             ->where('view','=', 0)
             ->get();
@@ -91,6 +92,33 @@ class DashboardController extends Controller
         return view('peserta.create');
     }
 
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'full_name' => 'required|string',
+            'birthdate' => 'required|date',
+            'contact' => 'required|digits_between:1,12|numeric',
+            'vegetarian' => 'required',
+            'photo' => 'required|max:700|mimes:jpeg,png',
+            'buy_shirt' => 'required',
+            'email' => 'required|string|email|max:255|unique:groups',
+        ],
+        [
+            'full_name.required' => 'Kolom nama harus diisi',
+            'birthday.required' => 'Kolom tanggal lahir harus diisi',
+            'email.required' => 'Kolom email harus diisi',
+            'contact.required' => 'Kolom kontak harus diisi',
+            'vegetarian.required' => 'Kolom vegetarian harus diisi',
+            'photo.required' => 'Kolom foto identitas harus diisi',
+            'contact.digits' => 'Anda memasukkan nomor terlalu panjang',
+            'birthday.date' => 'Masukkan dalam bentuk format tanggal yang benar',
+            'contact.numeric' => 'Nomor telepon yang anda masukkan tidak valid',
+            'photo.max' => 'Ukuran foto yang diperbolehkan adalah 700kb',
+            'photo.mimes' => 'Format foto yang diperbolehkan adalah JPEG dan PNG',
+            'email.unique' => 'Email ini sudah digunakan',
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -101,6 +129,9 @@ class DashboardController extends Controller
     {
         //ADD NEW PARTICIPANT
         $data = $request->all();
+
+        $this->validator($data)->validate();
+
         if($data['buy_shirt']==0){
             $data['size'] = null;
         }
@@ -144,6 +175,8 @@ class DashboardController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validator($data)->validate();
+
         $participant =  Participant::find($id);
         $participant->full_name = $request->full_name;
         $participant->birthdate = $request->birthdate;
@@ -231,6 +264,10 @@ class DashboardController extends Controller
     }
     
     public function uploadVerification(Request $request){
+        $this->validate($request, [
+            'photo' => 'required|max:700|mimes:jpeg,png',
+        ]);
+
         $file = Auth::user()->verif;
         if($file != null){
             $file->delete();

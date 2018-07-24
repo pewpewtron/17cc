@@ -13,6 +13,8 @@ use App\Jury;
 use Carbon\Carbon;
 use App\Competition;
 use App\Notifications\NotifToInboxAfterVerification;
+use PDF;
+
 
 class AdminController extends Controller
 {
@@ -345,5 +347,16 @@ class AdminController extends Controller
         $kompetisi->save();
 
         return redirect()->back()->with('success', 'Berhasil memperbaharui data kompetisi');
+    }
+
+    function print(){
+        $participants = Group::where('competition_id', Auth::user()->competition_id)
+            ->join('participants', 'participants.group_id', '=', 'groups.id')
+            ->where('groups.verified', 1)
+            ->get();
+        // return $participants;
+        // return view('admin.print', compact('participants'));
+        $table = PDF::loadview('admin.print', compact('participants'));
+        return $table->stream('peserta_'.Auth::user()->competition->long_name.'.pdf');
     }
 }

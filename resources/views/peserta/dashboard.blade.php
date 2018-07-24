@@ -32,6 +32,15 @@
         <i class="fa fa-check"></i> <strong>{{ \Session::get('success') }}</strong>
     </div>
     @endif
+    @if ($errors->any())
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <i class="fa fa-close"></i> <strong>Error saat memasukkan data.</strong><br>
+        @foreach ($errors->all() as $error)
+           #{{ $error }}<br>
+        @endforeach
+    </div>
+    @endif
     <!-- END OVERVIEW -->
     <div class="row">
         <div class="col-md-6">
@@ -98,21 +107,25 @@
             <!-- DATA ANGGOTA -->
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><center>Data Anggota Tim</center></h3>
+                    @if(Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5)
+                        <h3 class="panel-title"><center>Data Anggota Tim</center></h3>
+                    @else
+                        <h3 class="panel-title"><center>Data Diri</center></h3>
+                    @endif
                 </div>
                 <div class="panel-body table-responsive">
-                    
-                    @if(Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5)
-                    @if(count($jumlah)!=3)
-                    <!--Pemberitahuan Tambah Anggota-->
-                    <div class="alert alert-danger">
-                        <p>Hai, <i>{{Auth::user()->group_name}}</i> pastikan jumlah anggota tim anda telah lengkap. Silakan tambahkan data anggota tim anda melalui tombol berikut</p><br>
-                        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalTambah">Tambah Anggota Tim</button>
-                    </div>
-                    <!--End Pemberitahuan Tambah Anggota-->
+                    @if(Auth::user()->verified == 0)
+                        @if(Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5)
+                            @if(count($jumlah)!=3)
+                            <!--Pemberitahuan Tambah Anggota-->
+                            <div class="alert alert-danger">
+                                <p>Hai, <i>{{Auth::user()->group_name}}</i> pastikan jumlah anggota tim anda telah lengkap. Silakan tambahkan data anggota tim anda melalui tombol berikut</p><br>
+                                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalTambah">Tambah Anggota Tim</button>
+                            </div>
+                            <!--End Pemberitahuan Tambah Anggota-->
+                            @endif
+                        @endif
                     @endif
-                    @endif
-
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -130,18 +143,20 @@
                         <tbody>
                             @foreach($participants as $participant)
                             <tr>
-                                <td><img width="200" src="{{asset('uploads\\identitas\\'.$participant->photo)}}" /></td>
+                                <td><img width="100" src="{{asset('uploads\\identitas\\'.$participant->photo)}}" /></td>
                                 <td>{{($participant->code=='')?"Belum Verifikasi":$participant->code}}</td>
                                 <td>{{$participant->full_name}}</td>
-                                <td>{{$participant->birthdate}}</td>
+                                <td>{{date('d-m-Y', strtotime($participant->birthdate))}}</td>
                                 <td>{{$participant->email}}</td>
                                 <td>{{$participant->contact}}</td>
                                 <td>{{($participant->vegetarian==1)?"Ya":"Tidak"}}</td>
                                 <td>{{($participant->buy_shirt==1)?"Ya":"Tidak"}}</td>
                                 <td>
+                                    @if(Auth::user()->verified == 0)
                                     <a onclick="edit_participant(this)" data-id="{{$participant->id}}" class="btn btn-warning btn-sm edit" title="Edit" style="margin:2px;" data-toggle="modal" type="button" data-target="#modalEdit"><i class="glyphicon glyphicon-pencil"></i></a> 
-                                    @if(!$participant->captain)
-                                    <a onclick="del_participant(this)" data-post="{{ url('/dashboard', ['id' => $participant->id]) }}" class="btn btn-danger btn-sm" style="margin:2px;" title="Hapus" data-toggle="modal" type="button" data-target="#modalDelete"><i class="glyphicon glyphicon-trash"></i></a>
+                                        @if(!$participant->captain)
+                                        <a onclick="del_participant(this)" data-post="{{ url('/dashboard', ['id' => $participant->id]) }}" class="btn btn-danger btn-sm" style="margin:2px;" title="Hapus" data-toggle="modal" type="button" data-target="#modalDelete"><i class="glyphicon glyphicon-trash"></i></a>
+                                        @endif
                                     @endif
                                 </td>
                             </tr>
@@ -169,13 +184,13 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Nama Lengkap</label>
                             <div class="col-md-9">
-                                <input type="text" name="full_name" class="form-control" placeholder="ex. 'Nama Brata'">
+                                <input type="text" name="full_name" class="form-control" placeholder="ex. 'Made Brata'" required="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">Tanggal Lahir</label>
                             <div class="col-md-9">
-                                <input class="form-control" type="date" name="birthdate" placeholder="ex. '1995/12/27'">
+                                <input class="form-control" type="date" name="birthdate" placeholder="ex. '1995/12/27'" required="">
                             </div>
                         </div>
                         <div class="form-group">
@@ -200,7 +215,7 @@
                             <label class="control-label col-md-3">Kartu Identitas</label>
                             <div class="col-md-9">
                                 <input name="photo" type="file" class="form-control" accept="image/*">
-                                <small>Gambar dalam bentuk file .jpg</small>                      
+                                <small>Gambar dalam bentuk file jpeg dan png</small>                      
                             </div>
                         </div>
                         <div class="form-group">
@@ -419,12 +434,12 @@
     </div>
     <!-- End Modal Pringatan -->
 
-    <script type="text/javascript">
+{{--     <script type="text/javascript">
         $(window).load(function(){
             $('#modalInfo').modal('show');
         });
     </script>
-
+ --}}
 </div>
 <script>
     function edit_participant(e){

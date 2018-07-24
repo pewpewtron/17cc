@@ -120,6 +120,7 @@ Route::prefix('admin')->group(function(){
     
     Route::get('/verif_group','AdminController@showFormVerifikasi');
     Route::post('/verif_group','AdminController@verifikasi');
+    Route::post('/cetak-peserta','AdminController@print')->name('admin.cetakpeserta');
 });
 
 /*=========================================================================================

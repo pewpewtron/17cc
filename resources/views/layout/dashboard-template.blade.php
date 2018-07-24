@@ -48,7 +48,7 @@
                     <ul class="nav">
                         <li class="hidden-lg"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color: #021B79"><img src="{{asset('asset/images/user.png')}}" width="30px" height="30px" class="img-circle" alt="Avatar"> <span style="color: white">{{Auth::user()->group_name}}</span></a></li>
                         <li><a href="/dashboard"><i class="glyphicon glyphicon-dashboard"></i> <span>Dashboard</span></a></li>
-                        <li><a href="/verifikasi"><i class="glyphicon glyphicon-list-alt"></i> <span>Verifikasi</span></a></li>
+                        <li><a href="/verifikasi"><i class="glyphicon glyphicon-list-alt"></i> <span>Upload Bukti Pembayaran</span></a></li>
                         @if(Auth::user()->competition_id==2 or Auth::user()->competition_id==4 or Auth::user()->competition_id==5)
                         <li><a href="/upload"><i class="glyphicon glyphicon-cloud-upload"></i> <span>Upload Data</span></a></li>
                         @endif
@@ -114,8 +114,8 @@
                 @yield('content')
             </div>
             <!-- END MAIN CONTENT -->
-            <footer>
-                <div class="container-fluid">
+            <footer style="position: relative !important;">
+                <div class="container-fluid" >
                     <p class="copyright" style="color: #021B79;">&copy; Information Technology Creative Competition 2018 | <a href="http://it.unud.ac.id" style="color: #0575E6;">Teknologi Informasi Udayana</a></p>
                 </div>
             </footer>

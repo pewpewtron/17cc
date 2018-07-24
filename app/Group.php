@@ -23,6 +23,7 @@ class Group extends Authenticatable
         'email',
         'competition_id',
         'email_token',
+        'regist_cost'
     ];
 
     /**

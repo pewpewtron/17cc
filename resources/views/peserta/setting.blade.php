@@ -43,7 +43,7 @@
 				</div>
 				<div class="panel-body">
 					<form action="{{url('/change/password')}}" method="post" role="form">
-						@csrf
+						{{ csrf_field() }}
 						<div class="form-group row">
                             <label class="col-form-label col-md-3">Lama</label>
                             <div class="col-md-9">

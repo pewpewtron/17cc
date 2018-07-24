@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Verified_req extends Model
 {
-    public static $dir_verifikasi = "verif";
+    public static $dir_verifikasi = "uploads/verif";
 
     protected $fillable = [
         'group_id',

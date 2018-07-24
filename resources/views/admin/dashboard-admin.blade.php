@@ -127,6 +127,12 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="col-sm-12" style="margin-top: 20px;">
+                        <form action="{{ route('admin.cetakpeserta') }}" method="post">
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn btn-primary">Print Data Peserta</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
