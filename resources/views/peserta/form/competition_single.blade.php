@@ -97,7 +97,7 @@
                         <div class="form-group row">
                             <label class="col-form-label col-md-3">Kartu Identitas</label>
                             <div class="col-md-9">
-                                <input name="photo" type="file" class="form-control{{ $errors->has('photo') ? ' is-invalid' : '' }}" accept="image/*">
+                                <input name="photo" type="file" class="form-control{{ $errors->has('photo') ? ' is-invalid' : '' }}" accept="image/*" id="imgInp">
                                 <small>Gambar dalam bentuk file .jpg</small>
 
                                 @if ($errors->has('photo'))
@@ -105,6 +105,7 @@
                                         <strong>{{ $errors->first('photo') }}</strong>
                                     </span>
                                 @endif
+                                <br><img id="blah" src="#" alt="" style="margin-top: 20px; max-height: 500px; margin-bottom: 10px;"/><br><br>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -160,6 +161,7 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
+                                
                             </div>
                         </div>
                         <div class="form-group row">
@@ -195,4 +197,22 @@
 	$('#baju-no').click(function(e){
 		$('#ukuran-baju').hide();
 	});
+</script>
+<script type="text/javascript">
+function readURL(input) {
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
 </script>

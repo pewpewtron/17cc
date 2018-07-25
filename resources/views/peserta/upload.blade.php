@@ -21,7 +21,7 @@
 				<div class="panel-body">
 					<div class="col-sm-12">
 						@if(Auth::user()->file != null)
-							<div class="alert alert-info">
+							<div class="alert alert-success">
 								<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
 								<p style="text-align: justify; text-justify: inter-word;">Terimakasih anda sudah mengunggah berkas proposal anda. Tunggu info lebih lanjut terkait hasil penilaian proposal anda.</p>
 								<p>Proposal terakhir diunggah pada <b>{{ date('d-m-Y H:i', strtotime(Auth::user()->file->created_at)) }}</b></p>

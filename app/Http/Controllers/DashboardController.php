@@ -21,6 +21,7 @@ use App\Shirt;
 use Validator;
 use Redirect;
 use App\Videoapk;
+use App\Poster;
 
 class DashboardController extends Controller
 {
@@ -130,16 +131,14 @@ class DashboardController extends Controller
     public function store(Request $request)
     {
         //ADD NEW PARTICIPANT
-        $data = $request->all();
 
+        $data = $request->all();
         $this->validator($data)->validate();
 
-        if($data['buy_shirt']==0){
-            $data['size'] = null;
-        }
+        $data['buy_shirt'] = Auth::user()->participants[0]->buy_shirt;
         $data['captain'] = 0;
         $data['group_id'] = Auth::user()->id;
-        $data['photo'] = $request->competition_id."_".$request->full_name.".".$request->file('photo')->getClientOriginalExtension();
+        $data['photo'] = Auth::user()->id."_".$request->full_name.".".$request->file('photo')->getClientOriginalExtension();
         Participant::uploadPhoto($request->file('photo'), $data['photo']);
         Participant::create($data);
 
@@ -198,13 +197,20 @@ class DashboardController extends Controller
             'photo.mimes' => 'Format foto yang diperbolehkan adalah JPEG dan PNG',
         ]);
 
+
         $participant =  Participant::find($id);
+        $group = Group::find($participant->group_id);
+        
         $participant->full_name = $request->full_name;
         $participant->birthdate = $request->birthdate;
         $participant->email = $request->email;
         $participant->contact = $request->contact;
         $participant->vegetarian = $request->vegetarian;
-        $participant->buy_shirt = $request->buy_shirt;
+        if ($group->participants[0]->id == $participant->id) {
+            Participant::where('group_id', $group->id)
+                ->update(['buy_shirt' => $request->buy_shirt]);
+        }
+        
         $participant->size = ($participant->buy_shirt==0) ? null : $request->size;
         if($request->file('photo') != null){
             $photo = Auth::user()->competition_id."_".$request->full_name.".".$request->file('photo')->getClientOriginalExtension();
@@ -272,6 +278,49 @@ class DashboardController extends Controller
             ->get();
         
         return view('peserta.upload', compact('jumlahPesan'));
+    }
+
+    public function showUploadPosterForm(){
+        if (Auth::user()->competition_id != 4) {
+            return redirect('dashboard');
+        }
+
+        if (Auth::user()->verified_email!=1) {
+            return redirect('dashboard')->with('warning', 'Mohon melakukan verifikasi email terlebih dahulu!');
+        }
+
+        if (Auth::user()->verified != 1) {
+            return redirect('dashboard')->with('warning', 'Mohon maaf, Anda belum menjadi Peserta sah. Unggah bukti pembayaran anda dan tunggu Panitia untuk melakukan verifikasi.');
+        }
+
+        if (Auth::user()->file == null) {
+            return redirect('dashboard')->with('warning', 'Unggah proposal terlebih dahulu sebelum mengunggah Poster');
+        }
+
+        $jumlahPesan = AdminMessageTemporary::where('group_id','=', Auth::user()->id)
+            ->where('view','=', 0)
+            ->get();
+        $dir = Poster::$dir;
+        return view('peserta.uploadPoster', compact('jumlahPesan', 'dir'));
+    }
+
+    public function uploadPoster(Request $request){
+        $this->validate($request, [
+            'file' => 'required|max:700|mimes:jpeg,png',
+        ]);
+
+        $file = Auth::user()->poster;
+        if($file != null){
+            $file->delete();
+        }
+
+        $data = $request->all();
+        $data['group_id'] = Auth::user()->id;
+        $data['file'] = "poster_".Auth::user()->file->title.".".$request->file('file')->getClientOriginalExtension();
+        Poster::upload($request->file('file'), $data['file']);
+        Poster::create($data);
+
+        return Redirect::back()->with('success', 'Berhasil upload verifikasi!');
     }
 
     public function showUploadVideoAPKForm(){

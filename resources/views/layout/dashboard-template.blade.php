@@ -55,9 +55,12 @@
                         @if(Auth::user()->competition_id == 5)
                             <li><a href="/uploadVideoAPK"><i class="glyphicon glyphicon-cloud-upload"></i> <span>Upload Video dan APK</span></a></li>
                         @endif
+                        @if(Auth::user()->competition_id == 4)
+                            <li><a href="/uploadPoster"><i class="glyphicon glyphicon-cloud-upload"></i> <span>Upload Poster</span></a></li>
+                        @endif
                         <li><a href="/setting"><i class="glyphicon glyphicon-cog"></i> <span>Setting</span></a></li>
-                        <li><a href="/pesanUser"><i class="glyphicon glyphicon-envelope"></i> <span>Pesan Masuk</span> @yield('pesan')</a></li>
-                        <li><a href="/pesanUserKeluar"><i class="glyphicon glyphicon-envelope"></i> <span>Pesan Keluar</span></a></li>
+                       {{--  <li><a href="/pesanUser"><i class="glyphicon glyphicon-envelope"></i> <span>Pesan Masuk</span> @yield('pesan')</a></li>
+                        <li><a href="/pesanUserKeluar"><i class="glyphicon glyphicon-envelope"></i> <span>Pesan Keluar</span></a></li> --}}
                         <li class="hidden-lg"><a href="#" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-log-out"></i> <span>Log Out</span></a></li>
                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

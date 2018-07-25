@@ -14,7 +14,8 @@ use Carbon\Carbon;
 use App\Competition;
 use App\Notifications\NotifToInboxAfterVerification;
 use PDF;
-
+use Mail;
+use App\Mail\EmailParticipant;
 
 class AdminController extends Controller
 {
@@ -43,9 +44,9 @@ class AdminController extends Controller
         $participant = DB::table('participants')
             ->join('groups', 'groups.id','=','participants.group_id')
             ->where('groups.competition_id','=',Auth::user()->competition_id)
+            ->select('participants.*', 'groups.group_name', 'groups.institution', 'groups.verified')
             ->get();
 
-        // return $participant;
 
         $jumlahPeserta = DB::table('participants')
             ->join('groups','groups.id','=','participants.group_id')
@@ -84,6 +85,24 @@ class AdminController extends Controller
 
         return view('admin.dashboard-admin', compact('group','participant','jumlahPeserta','jumlahTim','jumlahVeget','jumlahNonVeget','jumlahPesan'));
     }
+
+    function showKirimEmailForm(){
+        $groups = Group::where('competition_id', Auth::user()->competition_id)
+            ->get();
+
+
+        return view('admin.kirimEmail', compact('groups'));
+    }
+
+
+    function kirimEmail(Request $request){
+        $email = new EmailParticipant($request);
+        $group = Group::find($request->tim);
+        Mail::to($group->email)->send($email);
+
+        return back()->with('success', 'Berhasil mengirim email ke '. $group->group_name);;
+    }
+
 
     public function showFormPembayaran()
     {

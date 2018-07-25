@@ -211,7 +211,7 @@
                             <label class="control-label col-md-3">Baju Peserta</label>
                             <div class="col-md-9">
                                 <label><input type="radio" id="baju_yes_add" value="1" name="buy_shirt"> Ya </label> <label><input type="radio" id="baju_no_add" value="0" name="buy_shirt"> Tidak</label><br>
-                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}</small>
+                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}. Jika ketua membeli baju, maka anggota lain otomatis juga membeli.</small>
                             </div>
                         </div>
                         <div class="form-group" id="ukuran_baju_add" style="display: none;">
@@ -292,7 +292,7 @@
                             <label class="control-label col-md-3">Baju Peserta</label>
                             <div class="col-md-9">
                                 <label><input type="radio" id="baju_yes_edit" value="1" name="buy_shirt"> Ya </label> <label><input type="radio" id="baju_no_edit" value="0" name="buy_shirt"> Tidak</label><br>
-                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}</small>
+                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}. Jika ketua membeli baju, maka anggota lain otomatis juga membeli.</small>
                             </div>
                         </div>
                         <div class="form-group" id="ukuran_baju_edit" style="">
@@ -334,7 +334,7 @@
                 <div class="modal-footer">
                     <form id="formDelete" method="post" action="#">
                         <input type="hidden" name="_method" value="delete" />
-                        {!! csrf_field() !!}
+                        {{ csrf_field() }}
                         <button type="submit" class="btn btn-danger">Ya</button>
                     </form>
                 </div>
@@ -491,6 +491,8 @@
 	$('#baju_no_add').click(function(e){
 		$('#ukuran_baju_add').hide();
 	});
+
 </script>
+
 @endsection
 

@@ -55,7 +55,7 @@
                                 @endif
                                 <td>{{$peserta->full_name}}</td>
                                 <td>{{$peserta->group_name}}</td>
-                                <td><a class="btn btn-info btn-sm view" style="margin:2px;" data-toggle="modal" data-target="#modal-foto{{$peserta->id}}" type="button"><i class="glyphicon glyphicon-picture"></i></a></td>
+                                <td><a class="btn btn-info btn-sm view" style="margin:2px;" data-toggle="modal" data-target="#modal-foto{{$peserta->id}}" type="button"><i class="glyphicon glyphicon-picture"></i></a>
                                 <!-- Modal Foto -->
                                 <div id="modal-foto{{$peserta->id}}" class="modal fade" role="dialog">
                                     <div class="modal-dialog">
@@ -67,7 +67,7 @@
                                                 <h4 class="modal-title"><center>Kartu Identitas Peserta</center></h4>
                                             </div>
                                             <div class="modal-body">
-                                                <img src="{{asset('uploads\\identitas\\'.$peserta->photo)}}" style="width: 100%" />
+                                                <img src="{{asset('uploads/identitas/'.$peserta->photo)}}" style="width: 100%" />
                                             </div>
                                             <div class="modal-footer">
                                             </div>
@@ -76,6 +76,7 @@
                                     </div>
                                 </div>
                                 <!-- End Modal Foto -->
+                                </td>
                                 <td>{{$peserta->institution}}</td>
                                 <td>{{$peserta->email}}</td>
                                 <td>{{$peserta->contact}}</td>

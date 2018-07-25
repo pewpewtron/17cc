@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
+use App\Shirt;
 
 class Group extends Authenticatable
 {
@@ -36,18 +37,31 @@ class Group extends Authenticatable
     ];
 
     public function get_shirts_cost(){
-        $result = $this->join('participants','participants.group_id','=','groups.id')
-                ->leftJoin('shirts','shirts.size','=','participants.size')
-                ->select(DB::raw('sum(IFNULL(shirts.price,0)) as shirt_total'))
-                ->where('groups.verified','!=',1)
-                ->orWhereNull('groups.verified')
-                ->first();
+        if ($this->participants[0]->buy_shirt == 0) {
+            return 0;
+        }
 
-        return $result->shirt_total;
+        if ($this->competition_id == 1 or $this->competition_id == 2) {
+            $total = Shirt::find(1)->price;
+        }else{
+            $total = Shirt::find(1)->price*3;
+        }
+        // $result = $this->join('participants','participants.group_id','=','groups.id')
+        //         ->leftJoin('shirts','shirts.size','=','participants.size')
+        //         ->select(DB::raw('sum(IFNULL(shirts.price,0)) as shirt_total'))
+        //         ->where('groups.verified','!=',1)
+        //         ->orWhereNull('groups.verified')
+        //         ->first();
+
+        return $total;
     }
 
     public function get_regist_cost(){
-        return $this->competition->regist_cost;
+        return $this->regist_cost;
+    }
+
+    public function poster(){
+        return $this->hasOne('App\Poster');
     }
 
     public function videoapk(){

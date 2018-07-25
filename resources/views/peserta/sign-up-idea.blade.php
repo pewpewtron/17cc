@@ -19,5 +19,5 @@
 @endsection
 
 @section('content')
-@extends('peserta.form.competition_group')
+@include('peserta.form.competition_group')
 @endsection

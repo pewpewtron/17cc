@@ -26,11 +26,11 @@
 				<div class="alert alert-warning">
 					<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
 					<p style="text-align: justify; text-justify: inter-word;">Apakah data anda sudah terisi lengkap? Silahkan dilanjutkan dengan pembayaran pendaftaran lomba melalui ATM pada rekening <b>Nama Bank</b><i> no rekening a.n Nama Bendahara</i>.
-						Nominal uang yang ditransfer adalah <b>Rp{{$biaya_baju+$biaya_pendaftaran}}</b></p>
+						Nominal uang yang ditransfer adalah <b>Rp {{number_format($biaya_baju+$biaya_pendaftaran)}}</b></p>
 					<p style="text-align: left">Rincian Biaya sebagai berikut :
 						<ul>
-							<li style="text-align: left">Biaya Pendaftaran Rp{{$biaya_pendaftaran}}</li>
-							<li style="text-align: left">Baju Peserta Rp{{$biaya_baju}}</li>
+							<li style="text-align: left">Biaya Pendaftaran Rp {{number_format($biaya_pendaftaran)}}</li>
+							<li style="text-align: left">Baju Peserta Rp {{ number_format($biaya_baju)}}</li>
 						</ul>
 					</p><br>
 					<p><b>INGAT! Nominal harus sesuai dengan yang disebutkan diatas. Jika tidak, maka data tidak akan diproses.</b></p>
