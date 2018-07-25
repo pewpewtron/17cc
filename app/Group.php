@@ -50,8 +50,12 @@ class Group extends Authenticatable
         return $this->competition->regist_cost;
     }
 
+    public function videoapk(){
+        return $this->hasOne('App\Videoapk');
+    }
+
     public function file(){
-        return $this->hasMany('App\File');
+        return $this->hasOne('App\File');
     }
 
     public function participants(){

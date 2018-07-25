@@ -65,6 +65,9 @@ Route::post('/verifikasi','DashboardController@uploadVerification');
 Route::get('/upload','DashboardController@showUploadDataForm');
 Route::post('/upload','DashboardController@uploadData');
 
+Route::get('/uploadVideoAPK','DashboardController@showUploadVideoAPKForm');
+Route::post('/uploadVideoAPK','DashboardController@uploadVideoAPK');
+
 Route::get('/setting','DashboardController@showSettingForm');
 
 Route::resource('/pesanUser','UserMassageController');

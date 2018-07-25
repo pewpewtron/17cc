@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Hash;
 use App\Group;
 use App\Shirt;
 use Validator;
+use Redirect;
+use App\Videoapk;
 
 class DashboardController extends Controller
 {
@@ -174,8 +176,27 @@ class DashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        $this->validator($data)->validate();
+    {   
+        $this->validate($request, [
+            'full_name' => 'required|string',
+            'birthdate' => 'required|date',
+            'contact' => 'required|digits_between:1,12|numeric',
+            'vegetarian' => 'required',
+            'buy_shirt' => 'required',
+            'email' => 'required|string|email|max:255',
+            'photo' => 'max:700|mimes:jpeg,png',
+        ],[
+            'full_name.required' => 'Kolom nama harus diisi',
+            'birthday.required' => 'Kolom tanggal lahir harus diisi',
+            'email.required' => 'Kolom email harus diisi',
+            'contact.required' => 'Kolom kontak harus diisi',
+            'vegetarian.required' => 'Kolom vegetarian harus diisi',
+            'contact.digits' => 'Anda memasukkan nomor terlalu panjang',
+            'birthday.date' => 'Masukkan dalam bentuk format tanggal yang benar',
+            'contact.numeric' => 'Nomor telepon yang anda masukkan tidak valid',
+            'photo.max' => 'Ukuran foto yang diperbolehkan adalah 700kb',
+            'photo.mimes' => 'Format foto yang diperbolehkan adalah JPEG dan PNG',
+        ]);
 
         $participant =  Participant::find($id);
         $participant->full_name = $request->full_name;
@@ -214,6 +235,12 @@ class DashboardController extends Controller
 
     public function showVerificationForm()
     {
+        if (Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5) {
+            if (count(Auth::user()->participants) != 3) {
+                return redirect('/dashboard')->with('warning', 'Input Data Tim Anda sebelum masuk ke menu Upload Bukti Pembayaran');
+            }
+        }
+
         if (Auth::user()->verified_email!=1) {
             return redirect('dashboard')->with('warning', 'Mohon melakukan verifikasi email terlebih dahulu!');
         }
@@ -224,8 +251,9 @@ class DashboardController extends Controller
         
         $biaya_pendaftaran = Auth::user()->get_regist_cost();
         $biaya_baju = Auth::user()->get_shirts_cost();
+        $dir = Verified_req::$dir_verifikasi;
 
-        return view('peserta.verifikasi', compact('jumlahPesan', 'biaya_baju', 'biaya_pendaftaran'));
+        return view('peserta.verifikasi', compact('jumlahPesan', 'biaya_baju', 'biaya_pendaftaran', 'dir'));
     }
 
     public function showUploadDataForm()
@@ -235,11 +263,55 @@ class DashboardController extends Controller
             return redirect('dashboard')->with('warning', 'Mohon melakukan verifikasi email terlebih dahulu!');
         }
 
+        if (Auth::user()->verified != 1) {
+            return redirect('dashboard')->with('warning', 'Mohon maaf, Anda belum menjadi Peserta san. Unggah bukti pembayaran anda dan tunggu Panitia untuk melakukan verifikasi.');
+        }
+
         $jumlahPesan = AdminMessageTemporary::where('group_id','=', Auth::user()->id)
             ->where('view','=', 0)
             ->get();
-
+        
         return view('peserta.upload', compact('jumlahPesan'));
+    }
+
+    public function showUploadVideoAPKForm(){
+
+        
+        if (Auth::user()->competition_id != 5) {
+            return redirect('dashboard');
+        }
+
+        if (Auth::user()->verified_email!=1) {
+            return redirect('dashboard')->with('warning', 'Mohon melakukan verifikasi email terlebih dahulu!');
+        }
+
+        if (Auth::user()->verified != 1) {
+            return redirect('dashboard')->with('warning', 'Mohon maaf, Anda belum menjadi Peserta san. Unggah bukti pembayaran anda dan tunggu Panitia untuk melakukan verifikasi.');
+        }
+
+
+        $jumlahPesan = AdminMessageTemporary::where('group_id','=', Auth::user()->id)
+            ->where('view','=', 0)
+            ->get();
+        
+        return view('peserta.uploadVideoAPK', compact('jumlahPesan'));
+    }
+
+    public function uploadVideoAPK(Request $request){
+        $this->validate($request, [
+            'link' => 'required',
+        ]);
+
+        $otherFileExist = Auth::user()->videoapk;
+        if($otherFileExist != null){
+            $otherFileExist->delete();
+        }
+
+        $data = $request->all();
+        $data['group_id'] = Auth::user()->id;
+        $link = Videoapk::create($data);
+
+        return redirect('/uploadVideoAPK')->with('success', 'Berhasil upload tautan!');
     }
 
     public function showSettingForm()
@@ -264,6 +336,7 @@ class DashboardController extends Controller
     }
     
     public function uploadVerification(Request $request){
+
         $this->validate($request, [
             'photo' => 'required|max:700|mimes:jpeg,png',
         ]);
@@ -280,10 +353,20 @@ class DashboardController extends Controller
         Verified_req::uploadVerification($request->file('photo'), $data['filename']);
         Verified_req::create($data);
 
-        return redirect('dashboard')->with('success', 'Berhasil upload verifikasi!');
+        return Redirect::back()->with('success', 'Berhasil upload verifikasi!');
     }
 
     public function uploadData(Request $request){
+        $this->validate($request, [
+            'title' => 'required',
+            'file' => 'required|mimes:pdf',
+        ]);
+
+        $otherFileExist = Auth::user()->file;
+        if($otherFileExist != null){
+            $otherFileExist->delete();
+        }
+
         $data = $request->all();
         $data['group_id'] = Auth::user()->id;
         $data['link'] = "berkas_".Auth::user()->id.".".$request->file('file')->getClientOriginalExtension();
@@ -304,6 +387,6 @@ class DashboardController extends Controller
         }
 
 
-        return redirect('dashboard')->with('success', 'Berhasil upload verifikasi!');
+        return redirect('/upload')->with('success', 'Berhasil upload proposal!');
     }
 }

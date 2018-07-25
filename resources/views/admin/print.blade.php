@@ -50,7 +50,9 @@
 				<tr>
 					<th>No</th>
 					<th>Kode Peserta</th>
+					@if(Auth::user()->competition_id != 1 && Auth::user()->competition_id != 2)
 					<th>Nama Peserta</th>
+					@endif
 					<th>Nama Tim</th>
 					<th>Instansi</th>
 				</tr>
@@ -61,7 +63,9 @@
 						<td>{{ $key+1 }}</td>
 						<td>{{ $val->code }}</td>
 						<td>{{ $val->full_name }}</td>
+						@if(Auth::user()->competition_id != 1 && Auth::user()->competition_id != 2)
 						<td>{{ $val->group_name }}</td>
+						@endif
 						<td>{{ $val->institution }}</td>
 					</tr>
 				@endforeach

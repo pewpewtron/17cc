@@ -22,19 +22,35 @@
 
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="alert alert-warning">
-				<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
-				<p style="text-align: justify; text-justify: inter-word;">Apakah data anda sudah terisi lengkap? Silahkan dilanjutkan dengan pembayaran pendaftaran lomba melalui ATM pada rekening <b>Nama Bank</b><i> no rekening a.n Nama Bendahara</i>.
-					Nominal uang yang ditransfer adalah <b>Rp{{$biaya_baju+$biaya_pendaftaran}}</b></p>
-				<p style="text-align: left">Rincian Biaya sebagai berikut :
-					<ul>
-						<li style="text-align: left">Biaya Pendaftaran Rp{{$biaya_pendaftaran}}</li>
-						<li style="text-align: left">Baju Peserta Rp{{$biaya_baju}}</li>
-					</ul>
-				</p><br>
-				<p><b>INGAT! Nominal harus sesuai dengan yang disebutkan diatas. Jika tidak, maka data tidak akan diproses.</b></p>
-			</div>
+			@if(Auth::user()->verif == NULL)
+				<div class="alert alert-warning">
+					<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
+					<p style="text-align: justify; text-justify: inter-word;">Apakah data anda sudah terisi lengkap? Silahkan dilanjutkan dengan pembayaran pendaftaran lomba melalui ATM pada rekening <b>Nama Bank</b><i> no rekening a.n Nama Bendahara</i>.
+						Nominal uang yang ditransfer adalah <b>Rp{{$biaya_baju+$biaya_pendaftaran}}</b></p>
+					<p style="text-align: left">Rincian Biaya sebagai berikut :
+						<ul>
+							<li style="text-align: left">Biaya Pendaftaran Rp{{$biaya_pendaftaran}}</li>
+							<li style="text-align: left">Baju Peserta Rp{{$biaya_baju}}</li>
+						</ul>
+					</p><br>
+					<p><b>INGAT! Nominal harus sesuai dengan yang disebutkan diatas. Jika tidak, maka data tidak akan diproses.</b></p>
+				</div>
+			@elseif(Auth::user()->verified == 0 || Auth::user()->verified == null)
+				<div class="alert alert-warning">
+					<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
+					<p style="text-align: justify; text-justify: inter-word;">Tunggu sebentar ya, Bukti Pembayaran anda sedang diproses panitia. Mohon bersabar. Jika anda melakukan kesalahan dalam pengunggahan bukti pembayaran, anda dapat mengunggahnya kembali dan bukti pembayaran lama akan terhapus dan tergantikan dengan yang baru.</p>
+					<p>Bukti Pembayaran saat ini adalah</p>
+					<img src="{{asset($dir.'/'.Auth::user()->verif->filename)}}" alt="" style="margin-top: 20px; max-height: 500px; margin-bottom: 10px;"/>
+				</div>
+			@else
+				<div class="alert alert-success">
+					<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
+					<p style="text-align: justify; text-justify: inter-word;">Terimakasih sudah melakukan pembayaran. Kami dari segenap Panitia ITCC 2018 mengucapkan terimakasih dan Selamat! anda sudah menjadi peserta sah ITCC 2018.</p>
+					
+				</div>
+			@endif
 		</div>
+		@if(Auth::user()->verified != 1)
 		<div class="col-sm-12">
 			<div class="panel">
 					<div class="panel-heading">
@@ -68,7 +84,7 @@
 					</div>
 			</div>
 		</div>
-
+		@endif
 	</div>
 </div>
 <script type="text/javascript">

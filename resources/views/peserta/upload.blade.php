@@ -13,72 +13,58 @@
 @section('content')
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12">
-			<h3><center>Upload Berkas Lomba</center></h3>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-6">
+		<div class="col-sm-12">
 			<div class="panel">
-				<div class="panel">
-
-					<div class="panel-heading">
-						<h3 class="panel-title"><center>Upload File</center></h3>
-						<div class="right">
-							<button type="button" class="btn-toggle-collapse"><i class="fa fa-chevron-up"></i></button>
-						</div>
+				<div class="panel-heading">
+					<h3 class="panel-title"><center>Upload Proposal</center></h3>
+				</div>
+				<div class="panel-body">
+					<div class="col-sm-12">
+						@if(Auth::user()->file != null)
+							<div class="alert alert-info">
+								<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
+								<p style="text-align: justify; text-justify: inter-word;">Terimakasih anda sudah mengunggah berkas proposal anda. Tunggu info lebih lanjut terkait hasil penilaian proposal anda.</p>
+								<p>Proposal terakhir diunggah pada <b>{{ date('d-m-Y H:i', strtotime(Auth::user()->file->created_at)) }}</b></p>
+							</div>
+						@else
+							<div class="alert alert-warning">
+								<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
+								<p style="text-align: justify; text-justify: inter-word;">Proposal yang diunggah berformat PDF. Anda dapat menunggah ulang Proposal baru anda sampai batas waktu yang telah ditentukan dengan kembali mengunggah berkas proposal baru di menu ini. <b>Pastikan kelengkapan data yang anda kirim.</b></p>
+							</div>
+						@endif
 					</div>
-					<div class="panel-body">
+					<div class="col-sm-12">
 						<form action="{{url('upload')}}" method="post" enctype="multipart/form-data">
-                        {{ csrf_field() }}
+	                    {{ csrf_field() }}
 						
 							<div class="form-group">
-								<label class="control-label col-md-3">Judul</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control" name="title" placeholder="Judul"/>
+								<label class="control-label">Judul Karya</label>
+								<div class="">
+									<input type="text" class="form-control" name="title" value="{{ (Auth::user()->file != null) ? Auth::user()->file->title : '' }}" />
 								</div>
-							</div>	
-							<div class="form-group">
-								<label class="control-label col-md-3">Berkas Lomba</label>
-								<div class="col-md-9">
-									<input type="file" name="file" class="form-control" accept=".pdf,.jpg,.png">
-									<small>Berkas dalam bentuk file .pdf/.jpg/.png</small>
+							</div>
+
+							<div class="form-group" style="margin-top: 20px;">
+								<label class="control-label">Berkas Lomba</label>
+								<small>*Berkas dalam bentuk file PDF</small>
+								<div class="">
+									<input type="file" name="file" class="form-control" accept=".pdf">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-3">Keterangan</label>
-								<div class="col-md-9">
-									<textarea class="form-control" name="etc" placeholder="Input Keterangan"></textarea>
+								<label class="control-label">Keterangan</label>
+								<div class="">
+									<textarea class="form-control" name="etc" placeholder="tulis keterangan tambahan yang ingin anda sampaikan. kosongkan jika tidak perlu"></textarea>
 								</div>
 							</div>
 							<button type="submit" class="btn btn-primary">Submit</button>
 
 						</form>
 					</div>
+					
 				</div>
 			</div>
 		</div>
-
-		<div class="col-md-6">
-			<div class="panel">
-				
-				<div class="panel-heading">
-					<h3 class="panel-title">Notifikasi</h3>
-					<div class="right">
-						<button type="button" class="btn-toggle-collapse"><i class="fa fa-chevron-up"></i></button>
-					</div>
-				</div>
-				<div class="panel-body">
-					<div class="alert alert-warning">
-						<p style="font-weight: bold;">Hai, {{Auth::user()->group_name}}</p>
-						<p style="text-align: justify; text-justify: inter-word;">Data Proposal yang diunggah dalam bentuk pdf dan data poster yang diunggah dalam bentuk jpg atau png. <b>Pastikan kelengkapan data yang anda kirim.</b></p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
 	</div>
 </div>
 @endsection
