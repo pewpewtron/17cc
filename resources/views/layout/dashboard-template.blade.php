@@ -48,13 +48,19 @@
                     <ul class="nav">
                         <li class="hidden-lg"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color: #021B79"><img src="{{asset('asset/images/user.png')}}" width="30px" height="30px" class="img-circle" alt="Avatar"> <span style="color: white">{{Auth::user()->group_name}}</span></a></li>
                         <li><a href="/dashboard"><i class="glyphicon glyphicon-dashboard"></i> <span>Dashboard</span></a></li>
-                        <li><a href="/verifikasi"><i class="glyphicon glyphicon-list-alt"></i> <span>Verifikasi</span></a></li>
+                        <li><a href="/verifikasi"><i class="glyphicon glyphicon-list-alt"></i> <span>Upload Bukti Pembayaran</span></a></li>
                         @if(Auth::user()->competition_id==2 or Auth::user()->competition_id==4 or Auth::user()->competition_id==5)
-                        <li><a href="/upload"><i class="glyphicon glyphicon-cloud-upload"></i> <span>Upload Data</span></a></li>
+                            <li><a href="/upload"><i class="glyphicon glyphicon-cloud-upload"></i> <span>Upload Proposal</span></a></li>
+                        @endif
+                        @if(Auth::user()->competition_id == 5)
+                            <li><a href="/uploadVideoAPK"><i class="glyphicon glyphicon-cloud-upload"></i> <span>Upload Video dan APK</span></a></li>
+                        @endif
+                        @if(Auth::user()->competition_id == 4)
+                            <li><a href="/uploadPoster"><i class="glyphicon glyphicon-cloud-upload"></i> <span>Upload Poster</span></a></li>
                         @endif
                         <li><a href="/setting"><i class="glyphicon glyphicon-cog"></i> <span>Setting</span></a></li>
-                        <li><a href="/pesanUser"><i class="glyphicon glyphicon-envelope"></i> <span>Pesan Masuk</span> @yield('pesan')</a></li>
-                        <li><a href="/pesanUserKeluar"><i class="glyphicon glyphicon-envelope"></i> <span>Pesan Keluar</span></a></li>
+                       {{--  <li><a href="/pesanUser"><i class="glyphicon glyphicon-envelope"></i> <span>Pesan Masuk</span> @yield('pesan')</a></li>
+                        <li><a href="/pesanUserKeluar"><i class="glyphicon glyphicon-envelope"></i> <span>Pesan Keluar</span></a></li> --}}
                         <li class="hidden-lg"><a href="#" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-log-out"></i> <span>Log Out</span></a></li>
                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -114,8 +120,8 @@
                 @yield('content')
             </div>
             <!-- END MAIN CONTENT -->
-            <footer>
-                <div class="container-fluid">
+            <footer style="position: relative !important;">
+                <div class="container-fluid" >
                     <p class="copyright" style="color: #021B79;">&copy; Information Technology Creative Competition 2018 | <a href="http://it.unud.ac.id" style="color: #0575E6;">Teknologi Informasi Udayana</a></p>
                 </div>
             </footer>

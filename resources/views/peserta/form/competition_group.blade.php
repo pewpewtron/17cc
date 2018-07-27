@@ -109,13 +109,14 @@
                         <div class="form-group row">
                             <label class="col-md-3 col-form-label">Kartu Identitas</label>
                             <div class="col-md-9">
-                                <input name="photo" type="file" class="form-control{{ $errors->has('photo') ? ' is-invalid' : '' }}" accept="image/*">
+                                <input name="photo" type="file" class="form-control{{ $errors->has('photo') ? ' is-invalid' : '' }}" accept="image/*" id="imgInp">
                                 <small>Gambar dalam bentuk file jpeg atau png</small>
                                 @if ($errors->has('photo'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('photo') }}</strong>
                                     </span>
                                 @endif
+                                <br><img id="blah" src="#" alt="" style="margin-top: 20px; max-height: 500px; margin-bottom: 10px;"/><br><br>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -140,7 +141,7 @@
 	                                <option value="l">Large</option>
 	                                <option value="xl">Extra Large</option>          
                                 </select>
-                                <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2017. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
+                                <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2018. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
                                 @if ($errors->has('size'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('size') }}</strong>
@@ -208,4 +209,22 @@
 	$('#baju-no').click(function(e){
 		$('#ukuran-baju').hide();
 	});
+</script>
+<script type="text/javascript">
+function readURL(input) {
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
 </script>

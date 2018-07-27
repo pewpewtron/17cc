@@ -23,7 +23,7 @@ ITCC 2018
 <li><a href="#informasi">Informasi</a></li>
 <li><a href="#jadwal">Jadwal</a></li>
 <li><a href="#contact">Kontak</a></li>
-{{--<li class="menu-has-children"><a href="#">Pendaftaran</a>
+<li class="menu-has-children"><a href="#">Pendaftaran</a>
     <ul>
       <li><a href="/daftar/pemrograman">Lomba Pemrograman</a></li>
       <li><a href="/daftar/desainweb">Lomba Desan Web</a></li>
@@ -31,8 +31,8 @@ ITCC 2018
       <li><a href="/daftar/android">Lomba Pengembangan Aplikasi Android</a></li>
       <li><a href="/daftar/idebisnis">Lomba Pengembangan Ide Bisnis TIK</a></li>
     </ul>
-</li>--}}
-{{--<li><a href="/login">Masuk</a></li>--}}
+</li>
+<li><a href="/login">Masuk</a></li>
 <li><a href="/faq">FAQ</a></li>
 @endsection
 

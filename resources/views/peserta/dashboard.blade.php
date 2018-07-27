@@ -12,146 +12,150 @@
 
 @section('content')
 <div class="container-fluid">
+    <div class="col-sm-12">
     <!-- OVERVIEW -->
 
-    @if (\Session::has('warning'))
-    <div class="alert alert-danger alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <i class="fa fa-close"></i> <strong>{{ \Session::get('warning') }}</strong>
-    </div>
-    @elseif (Auth::user()->verified_email!=1)
-    <div class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <i class="fa fa-warning"></i> <strong>Email Anda belum terverifikasi</strong>
-    </div>
-    @endif
-    
-    @if (\Session::has('success'))
-    <div class="alert alert-success alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <i class="fa fa-check"></i> <strong>{{ \Session::get('success') }}</strong>
-    </div>
-    @endif
-    <!-- END OVERVIEW -->
-    <div class="row">
-        <div class="col-md-6">
-            <!-- DATA TIM -->
-            <div class="panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Data Tim</h3>
-                    <div class="right">
-                        <button type="button" class="btn-toggle-collapse"><i class="fa fa-chevron-up"></i></button>
-                    </div>
-                </div>
-                <div class="panel-body table-responsive">
-                    <table class="table table-striped">
-                        <tbody>
-                            <tr>
-                                <td><b>Kode</b></td>
-                                <td><b>{{Auth::user()->id}}</b></td>
-                            </tr>
-                            <tr>
-                                <td><b>Nama Tim</b></td>
-                                <td><b>{{Auth::user()->group_name}}</b></td>
-                            </tr>
-                            <tr>
-                                <td><b>Asal Institusi</b></td>
-                                <td><b>{{Auth::user()->institution}}</b></td>
-                            </tr>
-                            <tr>
-                                <td><b>Status</b></td>
-                                <td>@if(Auth::user()->verified==1)
-                                    Telah Terverifikasi <i class="glyphicon glyphicon-ok" style="color:green"></i>
-                                    @else
-                                    Belum Terverifikasi <i class="glyphicon glyphicon-remove" style="color:red"></i><br>
-                                    @endif
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- END DATA TIM -->
+        @if (\Session::has('warning'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <i class="fa fa-close"></i> <strong>{{ \Session::get('warning') }}</strong>
         </div>
-        <div class="col-md-6">
-            <!-- PEMBERITAHUAN -->
-            <div class="panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Pemberitahuan!</h3>
-                    <div class="right">
-                        <button type="button" class="btn-toggle-collapse"><i class="fa fa-chevron-up"></i></button>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="alert alert-warning">
-                        <p style="font-weight:bold">Hai, {{Auth::user()->group_name}}.</p>
-                        <p style="text-align: justify;text-justify: inter-word;">Pastikan Anda telah melengkapi data peserta, biaya pendaftaran dan memverifikasikan data ke panitia ITCC 2018. Salam hangat dari admin ITCC 2018. Silakan lihat langkah-langkah yang harus anda lakukan pada tombol berikut. </p><br>
-                        <button class="btn btn-info btn-sm" type="button" data-toggle="modal" data-target="#modalInfo">Lihat Langkah-langkah</button>
-                     </div>
-                </div>
-            </div>
-            <!-- END PEMBERITAHUAN -->
+        @elseif (Auth::user()->verified_email!=1)
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <i class="fa fa-warning"></i> <strong>Email Anda belum terverifikasi</strong>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <!-- DATA ANGGOTA -->
-            <div class="panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><center>Data Anggota Tim</center></h3>
-                </div>
-                <div class="panel-body table-responsive">
-                    
-                    @if(Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5)
-                    @if(count($jumlah)!=3)
-                    <!--Pemberitahuan Tambah Anggota-->
-                    <div class="alert alert-danger">
-                        <p>Hai, <i>{{Auth::user()->group_name}}</i> pastikan jumlah anggota tim anda telah lengkap. Silakan tambahkan data anggota tim anda melalui tombol berikut</p><br>
-                        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalTambah">Tambah Anggota Tim</button>
-                    </div>
-                    <!--End Pemberitahuan Tambah Anggota-->
-                    @endif
-                    @endif
+        @endif
+        
+        @if (\Session::has('success'))
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <i class="fa fa-check"></i> <strong>{{ \Session::get('success') }}</strong>
+        </div>
+        @endif
+        @if ($errors->any())
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <i class="fa fa-close"></i> <strong>Error saat memasukkan data.</strong><br>
+            @foreach ($errors->all() as $error)
+               #{{ $error }}<br>
+            @endforeach
+        </div>
+        @endif
 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                               <th>Kartu Identitas</th>
-                               <th>Nomor Peserta</th>
-                               <th>Nama Lengkap</th>
-                               <th>Tanggal Lahir</th>
-                               <th>Email</th>
-                               <th>Nomer Kontak</th>
-                               <th>Veget</th>
-                               <th>Kaos</th>
-                               <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($participants as $participant)
-                            <tr>
-                                <td><img width="200" src="{{asset('uploads\\identitas\\'.$participant->photo)}}" /></td>
-                                <td>{{($participant->code=='')?"Belum Verifikasi":$participant->code}}</td>
-                                <td>{{$participant->full_name}}</td>
-                                <td>{{$participant->birthdate}}</td>
-                                <td>{{$participant->email}}</td>
-                                <td>{{$participant->contact}}</td>
-                                <td>{{($participant->vegetarian==1)?"Ya":"Tidak"}}</td>
-                                <td>{{($participant->buy_shirt==1)?"Ya":"Tidak"}}</td>
-                                <td>
-                                    <a onclick="edit_participant(this)" data-id="{{$participant->id}}" class="btn btn-warning btn-sm edit" title="Edit" style="margin:2px;" data-toggle="modal" type="button" data-target="#modalEdit"><i class="glyphicon glyphicon-pencil"></i></a> 
+    </div>
+        <!-- END OVERVIEW -->
+    @if(Auth::user()->verified != 1)
+    <div class="col-sm-12">
+        <div class="alert alert-warning">
+            <p style="font-weight:bold">Hai, {{Auth::user()->group_name}}.</p>
+            <p style="text-align: justify;text-justify: inter-word;">Pastikan Anda telah melengkapi data peserta, biaya pendaftaran dan memverifikasikan data ke panitia ITCC 2018. Salam hangat dari admin ITCC 2018. Silakan lihat langkah-langkah yang harus anda lakukan pada tombol berikut. </p><br>
+            <button class="btn btn-info btn-sm" type="button" data-toggle="modal" data-target="#modalInfo">Lihat Langkah-langkah</button>
+        </div>
+    </div>
+    @endif
+
+    
+    <div class="col-sm-12">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">Overview</h3>
+            </div>
+            <div class="panel-body table-responsive">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td><b>Kode</b></td>
+                            <td><b>{{Auth::user()->id}}</b></td>
+                        </tr>
+                        @if(Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5)
+                        <tr>
+                            <td><b>Nama Tim</b></td>
+                            <td><b>{{Auth::user()->group_name}}</b></td>
+                        </tr>
+                        @endif
+                        <tr>
+                            <td><b>Asal Institusi</b></td>
+                            <td><b>{{Auth::user()->institution}}</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Status</b></td>
+                            <td>@if(Auth::user()->verified==1)
+                                Telah Terverifikasi <i class="glyphicon glyphicon-ok" style="color:green"></i>
+                                @else
+                                Belum Terverifikasi <i class="glyphicon glyphicon-remove" style="color:red"></i><br>
+                                @endif
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-12">
+        <!-- DATA ANGGOTA -->
+        <div class="panel">
+            <div class="panel-heading">
+                @if(Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5)
+                    <h3 class="panel-title"><center>Data Anggota Tim</center></h3>
+                @else
+                    <h3 class="panel-title"><center>Data Diri</center></h3>
+                @endif
+            </div>
+            <div class="panel-body table-responsive">
+                @if(Auth::user()->verified == 0)
+                    @if(Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5)
+                        @if(count($jumlah)!=3)
+                        <!--Pemberitahuan Tambah Anggota-->
+                        <div class="alert alert-danger">
+                            <p>Hai, <i>{{Auth::user()->group_name}}</i> pastikan jumlah anggota tim anda telah lengkap. Silakan tambahkan data anggota tim anda melalui tombol berikut</p><br>
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalTambah">Tambah Anggota Tim</button>
+                        </div>
+                        <!--End Pemberitahuan Tambah Anggota-->
+                        @endif
+                    @endif
+                @endif
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                           <th>Kartu Identitas</th>
+                           <th>Nomor Peserta</th>
+                           <th>Nama Lengkap</th>
+                           <th>Tanggal Lahir</th>
+                           <th>Email</th>
+                           <th>Nomer Kontak</th>
+                           <th>Veget</th>
+                           <th>Kaos</th>
+                           <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($participants as $participant)
+                        <tr>
+                            <td><img width="100" src="{{asset('uploads\\identitas\\'.$participant->photo)}}" /></td>
+                            <td>{{($participant->code=='')?"Belum Verifikasi":$participant->code}}</td>
+                            <td>{{$participant->full_name}}</td>
+                            <td>{{date('d-m-Y', strtotime($participant->birthdate))}}</td>
+                            <td>{{$participant->email}}</td>
+                            <td>{{$participant->contact}}</td>
+                            <td>{{($participant->vegetarian==1)?"Ya":"Tidak"}}</td>
+                            <td>{{($participant->buy_shirt==1)?"Ya":"Tidak"}}</td>
+                            <td>
+                                @if(Auth::user()->verified == 0)
+                                <a onclick="edit_participant(this)" data-id="{{$participant->id}}" class="btn btn-warning btn-sm edit" title="Edit" style="margin:2px;" data-toggle="modal" type="button" data-target="#modalEdit"><i class="glyphicon glyphicon-pencil"></i></a> 
                                     @if(!$participant->captain)
                                     <a onclick="del_participant(this)" data-post="{{ url('/dashboard', ['id' => $participant->id]) }}" class="btn btn-danger btn-sm" style="margin:2px;" title="Hapus" data-toggle="modal" type="button" data-target="#modalDelete"><i class="glyphicon glyphicon-trash"></i></a>
                                     @endif
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                                @endif
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
-            <!-- END DATA ANGGOTA -->
         </div>
+        <!-- END DATA ANGGOTA -->
     </div>
 
     <!--Modal Tambah Anggota-->
@@ -169,13 +173,13 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Nama Lengkap</label>
                             <div class="col-md-9">
-                                <input type="text" name="full_name" class="form-control" placeholder="ex. 'Nama Brata'">
+                                <input type="text" name="full_name" class="form-control" placeholder="ex. 'Made Brata'" required="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">Tanggal Lahir</label>
                             <div class="col-md-9">
-                                <input class="form-control" type="date" name="birthdate" placeholder="ex. '1995/12/27'">
+                                <input class="form-control" type="date" name="birthdate" placeholder="ex. '1995/12/27'" required="">
                             </div>
                         </div>
                         <div class="form-group">
@@ -200,14 +204,14 @@
                             <label class="control-label col-md-3">Kartu Identitas</label>
                             <div class="col-md-9">
                                 <input name="photo" type="file" class="form-control" accept="image/*">
-                                <small>Gambar dalam bentuk file .jpg</small>                      
+                                <small>Gambar dalam bentuk file jpeg dan png</small>                      
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">Baju Peserta</label>
                             <div class="col-md-9">
                                 <label><input type="radio" id="baju_yes_add" value="1" name="buy_shirt"> Ya </label> <label><input type="radio" id="baju_no_add" value="0" name="buy_shirt"> Tidak</label><br>
-                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}</small>
+                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}. Jika ketua membeli baju, maka anggota lain otomatis juga membeli.</small>
                             </div>
                         </div>
                         <div class="form-group" id="ukuran_baju_add" style="display: none;">
@@ -288,7 +292,7 @@
                             <label class="control-label col-md-3">Baju Peserta</label>
                             <div class="col-md-9">
                                 <label><input type="radio" id="baju_yes_edit" value="1" name="buy_shirt"> Ya </label> <label><input type="radio" id="baju_no_edit" value="0" name="buy_shirt"> Tidak</label><br>
-                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}</small>
+                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}. Jika ketua membeli baju, maka anggota lain otomatis juga membeli.</small>
                             </div>
                         </div>
                         <div class="form-group" id="ukuran_baju_edit" style="">
@@ -330,7 +334,7 @@
                 <div class="modal-footer">
                     <form id="formDelete" method="post" action="#">
                         <input type="hidden" name="_method" value="delete" />
-                        {!! csrf_field() !!}
+                        {{ csrf_field() }}
                         <button type="submit" class="btn btn-danger">Ya</button>
                     </form>
                 </div>
@@ -419,12 +423,12 @@
     </div>
     <!-- End Modal Pringatan -->
 
-    <script type="text/javascript">
+{{--     <script type="text/javascript">
         $(window).load(function(){
             $('#modalInfo').modal('show');
         });
     </script>
-
+ --}}
 </div>
 <script>
     function edit_participant(e){
@@ -487,6 +491,8 @@
 	$('#baju_no_add').click(function(e){
 		$('#ukuran_baju_add').hide();
 	});
+
 </script>
+
 @endsection
 

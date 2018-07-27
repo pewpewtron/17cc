@@ -101,11 +101,13 @@ class GroupRegisterController extends Controller
         $data['password'] = Hash::make($data['password']);
 
         $data['email_token'] = bin2hex(openssl_random_pseudo_bytes(30));
+        $data['regist_cost'] = Competition::find($data['competition_id'])->regist_cost;
         
         if(!(array_key_exists("group_name",$data))){
             //single competition
             $data['group_name'] = $data['full_name'];
             $this->single_validator($request->all())->validate();
+            
         } else {
             //group competition
             $this->validator($request->all())->validate();

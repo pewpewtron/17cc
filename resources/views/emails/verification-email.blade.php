@@ -9,5 +9,5 @@ Aktivasi Akun
 @endcomponent
 
 Terimakasih,<br>
-Admin {{ config('app.name') }}
+Admin ITCC 2018
 @endcomponent

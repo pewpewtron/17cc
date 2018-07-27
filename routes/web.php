@@ -65,6 +65,12 @@ Route::post('/verifikasi','DashboardController@uploadVerification');
 Route::get('/upload','DashboardController@showUploadDataForm');
 Route::post('/upload','DashboardController@uploadData');
 
+Route::get('/uploadVideoAPK','DashboardController@showUploadVideoAPKForm');
+Route::post('/uploadVideoAPK','DashboardController@uploadVideoAPK');
+
+Route::get('/uploadPoster','DashboardController@showUploadPosterForm');
+Route::post('/uploadPoster','DashboardController@uploadPoster');
+
 Route::get('/setting','DashboardController@showSettingForm');
 
 Route::resource('/pesanUser','UserMassageController');
@@ -120,7 +126,11 @@ Route::prefix('admin')->group(function(){
     
     Route::get('/verif_group','AdminController@showFormVerifikasi');
     Route::post('/verif_group','AdminController@verifikasi');
+    Route::post('/cetak-peserta','AdminController@print')->name('admin.cetakpeserta');
 });
+
+Route::get('/kirimEmail', 'AdminController@showKirimEmailForm');
+Route::post('/kirimEmail', 'AdminController@kirimEmail');
 
 /*=========================================================================================
                                     JURY ROUTE
