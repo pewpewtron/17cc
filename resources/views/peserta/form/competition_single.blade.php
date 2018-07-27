@@ -2,7 +2,7 @@
     <div class="container">
     	<div class="row" style="margin-top: 90px;">
 
-    		<div class="col-md-4 box" style="background: #232323; max-height: 650px; margin-top: 50px;">
+    		<div class="d-none d-xl-block col-md-4 box" style="background: #232323; max-height: 650px; margin-top: 50px;">
                 <img src="{{asset('asset/images/logo-itcc5.png')}}" style=" width: 70%;margin-left: 65px;margin-top: 70px;" class="img-responsive center-block ">
                      
                 <h5 style="color:#a2c8cc; text-align: center;">"Powering Smart Society with Information Technology"</h5>
@@ -176,7 +176,7 @@
                         </div>
         			</div>
         		</div>
-        		<div class="card" style="border-radius: 0px">
+        		<div class="card" style="border-radius: 0px; margin-bottom: 30px;">
         			<div class="card-body">
         				<button class="btn btn-primary btn-block" type="submit">Daftar</button>
         			</div>

@@ -1061,7 +1061,7 @@ body{
 	background-color:#bc7535;
 }
 #footer{
-	position:absolute;
+	position:relative;
 	display: block;
 	width: 100%;
 	min-height: 5vh;

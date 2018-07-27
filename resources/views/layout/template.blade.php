@@ -90,7 +90,7 @@
 	  	<!--==========================
 	  				Sponsor
 	  	============================-->
-	  	<section id="sponsor" style="background-color: #fff; padding-top: 60px; padding-bottom: 60px;">
+	  	<section id="sponsor">
 	      	<div class="container wow fadeInUp">
 
 	        	<div class="row">
