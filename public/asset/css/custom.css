@@ -1,0 +1,106 @@
+.justify {
+	text-align: justify;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.color-red {
+	background: linear-gradient(rgba(101, 8, 2, 0.9), rgba(101, 8, 2, 0.9)) !important;
+}
+
+.padding-lg {
+	padding-top: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .padding-lg, {
+    padding-top: 120px !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .padding-lg {
+    padding-top: 120px !important;
+  }
+}
+
+.all-shadow {
+  box-shadow: 0 0 5px #000;
+}
+
+.top-shadow {
+  box-shadow: 0 -5px 5px -5px #000;
+}
+      
+.right-shadow {
+  box-shadow: -5px 0 5px -5px #000;
+}
+      
+.bottom-shadow {
+  box-shadow: 0 5px 5px -5px #000;
+}
+
+.left-shadow {
+  box-shadow: 5px 0 5px -5px #000;
+}
+
+#bg-login {
+  display:block;
+  position:relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(101, 8, 2, 0.9), rgba(101, 8, 2, 0.9)), url(../images/unud2.jpg);
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#bg-signup {
+  display:block;
+  position:relative;
+  width: 100%;
+  height: 160vh;
+  background: linear-gradient(rgba(101, 8, 2, 0.9), rgba(101, 8, 2, 0.9)), url(../images/unud2.jpg);
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#contact .form .btn-login[type="submit"] {
+  background: #650802;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+#contact .form .btn-login[type="submit"]:hover {
+  background: #ec6b63;
+}
+
+#contact .form .btn-cabang {
+  border: 2px solid #650802;
+  color: #650802;
+  /*background: #650802;
+  border: 0;*/
+  padding: 10px 24px;
+  /*color: #fff;*/
+  text-align: center;
+  display: inline-block;
+  transition: 0.4s;
+}
+
+#contact .form .btn-cabang:hover {
+  background: #ec6b63;
+  border: 2px solid #ec6b63;
+  color: #fff;
+}
+
+
+
