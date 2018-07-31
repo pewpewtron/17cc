@@ -207,6 +207,24 @@
                                 <small>Gambar dalam bentuk file jpeg dan png</small>                      
                             </div>
                         </div>
+                        <div class="form-group row" id="ukuran-baju">
+                            <label class="col-md-3 col-form-label">Ukuran Baju</label>
+                            <div class="col-md-9">
+                                <select id="select-ukuran" name="size" class="form-control" >
+                                    <option value="">Pilih Ukuran Baju</option>
+                                    <option value="s">Small</option>
+                                    <option value="m">Medium</option> 
+                                    <option value="l">Large</option>
+                                    <option value="xl">Extra Large</option>          
+                                </select>
+                                <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2018. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
+                                @if ($errors->has('size'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('size') }}</strong>
+                                    </span>
+                                @endif
+                          </div>
+                        </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Tambah</button>
                         </div>

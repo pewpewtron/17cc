@@ -119,27 +119,48 @@
                                 <br><img id="blah" src="#" alt="" style="margin-top: 20px; max-height: 500px; margin-bottom: 10px;"/><br><br>
                             </div>
                         </div>
-                        <div class="form-group row">
-                          	<label class="col-md-3 col-form-label">Baju Peserta</label>
-                          	<div class="col-md-9">
-                              	<label><input {{ old('buy_shirt')=="1"?"checked":"" }} type="radio" id="baju-yes" class="{{ $errors->has('buy_shirt') ? ' is-invalid' : '' }}" value="1" name="buy_shirt"> Ya </label> <label><input {{ old('buy_shirt')=="0"?"checked":"" }} type="radio" id="baju-no" class="{{ $errors->has('buy_shirt') ? ' is-invalid' : '' }}" value="0" name="buy_shirt"> Tidak</label><br>
-                              	<small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp</small><small id="harga_baju">{{$harga_baju}}</small>
-                              	@if ($errors->has('buy_shirt'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('buy_shirt') }}</strong>
-                                    </span>
-                                @endif
-                          	</div>
-                        </div>
-                        <div class="form-group row" id="ukuran-baju" style="display: none;">
-                          	<label class="col-md-3 col-form-label">Ukuran Baju</label>
-                          	<div class="col-md-9">
+                        @if ($competition->id == 3)
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label">Baju Peserta</label>
+                                <div class="col-md-9">
+                                    <label><input {{ old('buy_shirt')=="1"?"checked":"" }} type="radio" id="baju-yes" class="{{ $errors->has('buy_shirt') ? ' is-invalid' : '' }}" value="1" name="buy_shirt"> Ya </label> <label><input {{ old('buy_shirt')=="0"?"checked":"" }} type="radio" id="baju-no" class="{{ $errors->has('buy_shirt') ? ' is-invalid' : '' }}" value="0" name="buy_shirt"> Tidak</label><br>
+                                    <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp</small><small id="harga_baju">{{$harga_baju}}</small>
+                                    @if ($errors->has('buy_shirt'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('buy_shirt') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row" id="ukuran-baju" style="display: none;">
+                                <label class="col-md-3 col-form-label">Ukuran Baju</label>
+                                <div class="col-md-9">
+                                    <select id="select-ukuran" name="size" class="form-control" >
+                                        <option value="">Pilih Ukuran Baju</option>
+                                        <option value="s">Small</option>
+                                        <option value="m">Medium</option> 
+                                        <option value="l">Large</option>
+                                        <option value="xl">Extra Large</option>          
+                                    </select>
+                                    <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2018. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
+                                    @if ($errors->has('size'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('size') }}</strong>
+                                        </span>
+                                    @endif
+                              </div>
+                            </div>
+                        @else
+                        <div class="form-group row" id="ukuran-baju">
+                            <label class="col-md-3 col-form-label">Ukuran Baju</label>
+                            <div class="col-md-9">
                                 <select id="select-ukuran" name="size" class="form-control" >
-	                                <option value="">Pilih Ukuran Baju</option>
-	                                <option value="s">Small</option>
-	                                <option value="m">Medium</option> 
-	                                <option value="l">Large</option>
-	                                <option value="xl">Extra Large</option>          
+                                    <option value="">Pilih Ukuran Baju</option>
+                                    <option value="s">Small</option>
+                                    <option value="m">Medium</option> 
+                                    <option value="l">Large</option>
+                                    <option value="xl">Extra Large</option>          
                                 </select>
                                 <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2018. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
                                 @if ($errors->has('size'))
@@ -149,6 +170,7 @@
                                 @endif
                           </div>
                         </div>
+                        @endif
         			</div>
         		</div>
 
