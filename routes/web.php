@@ -15,6 +15,13 @@
                                     LANDING ROUTE
 =========================================================================================*/
 
+Route::get('/sendmail', function(){
+    // $email = new App\Mail\EmailVerification();
+
+    // Mail::to("maildummy888@gmail.com")->send($email);
+    // return view('emails.new');
+});
+
 Route::get('/', function () {
     return view('landing.landing');
 });

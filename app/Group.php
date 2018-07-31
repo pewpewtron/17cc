@@ -56,6 +56,10 @@ class Group extends Authenticatable
         return $total;
     }
 
+    public function get_captain(){
+        return $this->hasMany('App\Participant')->where('captain', "=", "1");
+    }
+
     public function get_regist_cost(){
         return $this->regist_cost;
     }

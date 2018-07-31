@@ -116,10 +116,7 @@ class GroupRegisterController extends Controller
         event(new Registered($user = $this->create($data)));
 
         //$this->guard()->login($user);
-
-        $email = new EmailVerification($user);
-
-        Mail::to($user->email)->send($email);
+        
 
         $data['group_id'] = $user->id;
         $data['photo'] = $request->competition_id."_".$request->full_name.".".$request->file('photo')->getClientOriginalExtension();
@@ -129,6 +126,10 @@ class GroupRegisterController extends Controller
         Participant::create($data);
         
 
+        $email = new EmailVerification($user);
+
+        Mail::to($user->email)->send($email);
+        
         return redirect()->to('login')->with('success','Kami telah mengirim link untuk aktivasi akun anda, silakan cek email anda'); 
 
         /*return $this->registered($request, $user)
