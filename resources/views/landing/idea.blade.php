@@ -20,7 +20,7 @@ Pengembangan Ide Bisnis TIK - ITCC 2018
 <li><a href="/">Beranda</a></li>
 <li><a href="#jadwal">Jadwal</a></li>
 <li><a href="#contact">Kontak</a></li>
-{{--<li><a href="/login">Masuk</a></li>--}}
+<li><a href="/login">Masuk</a></li>
 <li><a href="/faq">FAQ</a></li>
 @endsection
 

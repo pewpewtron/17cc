@@ -53,7 +53,6 @@ class GroupRegisterController extends Controller
             'contact' => 'required|numeric',
             'vegetarian' => 'required',
             'photo' => 'required|max:500|mimes:jpeg,png',
-            'buy_shirt' => 'required',
             'username' => 'required|string|max:255|unique:groups',
             'email' => 'required|string|email|max:255|unique:groups',
             'password' => 'required|string|min:6|confirmed',

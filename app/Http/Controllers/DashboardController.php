@@ -109,7 +109,6 @@ class DashboardController extends Controller
             'contact' => 'required|digits_between:1,12|numeric',
             'vegetarian' => 'required',
             'photo' => 'required|max:700|mimes:jpeg,png',
-            'buy_shirt' => 'required',
             'email' => 'required|string|email|max:255|unique:groups',
         ],
         [
