@@ -37,6 +37,7 @@
                                <th>Nama</th>
                                <th>Tim</th>
                                <th>Foto</th>
+                                <th>Tgl Lhr</th>
                                <th>Instansi</th>
                                <th>Email</th>
                                <th>Kontak</th>
@@ -77,6 +78,7 @@
                                 </div>
                                 <!-- End Modal Foto -->
                                 </td>
+                                <td>{{date('d-m-Y', strtotime($peserta->birthdate))}}</td>
                                 <td>{{$peserta->institution}}</td>
                                 <td>{{$peserta->email}}</td>
                                 <td>{{$peserta->contact}}</td>

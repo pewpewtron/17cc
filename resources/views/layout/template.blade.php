@@ -101,10 +101,7 @@
 			              <hr>
 			            </center>
                   <div class="row col-sm-12">
-                    <a href="https://www.dewaweb.com/" target="_blank">
-                      <div class="sponsor-lg" style="background-image: url('/sponsor/dewaweb.png')" title="Dewaweb">
-                      </div>
-                    </a>
+                    <img src="{{ url('/sponsor/sponsor.jpg') }}" style="max-height: 150px;">
                   </div>
 		         	</div>
 
@@ -114,54 +111,7 @@
 		              		<hr>
 		            	</center>
                   <div class="row col-sm-12">
-                    <a href="https://www.instagram.com/baliterkini.id/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/bali-terkini.jpg');" title="Bali Terkini">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/denpasarnow/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/denpasar_now.jpg');" title="Denpasar Now">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/denpasar.viral/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/denpasar_viral.jpg');" title="Denpasar Viral">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/infobadung/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/info_badung.jpg');" title="Info Badung">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/infodenpasar/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/info_denpasar.jpg');" title="Info Denpasar">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/infodensel/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/info_densel.jpg');" title="Info Densel">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/infokarangasem/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/info_karangasem.jpg');" title="Info Karangasem">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/infolomba/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/info_lomba.jpg');" title="Info Lomba">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/infolombabali/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/info_lomba_bali.jpg');" title="Info Lomba Bali">
-                      </div>
-                    </a>
-                    <a href="https://www.informasilomba.com/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/lombaorid.jpg');" title="Informasi Lomba">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/tabanan_update/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/tabanan_update.jpg');" title="Tabanan Update">
-                      </div>
-                    </a>
-                    <a href="https://www.instagram.com/teknoevent/" target="_blank">
-                      <div class="media-partner" style="background-image: url('/media_partner/tekno_event.jpg');" title="Tekno Event">
-                      </div>
-                    </a>
+                    <img src="{{ url('/sponsor/media.jpg') }}" style="max-height: 150px;">
                   </div>
 		          	</div>
 	        

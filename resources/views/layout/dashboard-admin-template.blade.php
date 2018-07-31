@@ -39,7 +39,7 @@
         <!-- SIDEBAR -->
         <div class="sidebar" style="background-color: #021B79">
             <div class="brand" style="background-color: #021B79">
-                <a href="index.html"><img src="{{asset('asset/images/logo-itcc5.png')}}" alt="ITCC Logo" class="img-responsive logo" width="100px" height="100px"></a>
+                <a href="/"><img src="{{asset('asset/images/logo-itcc5.png')}}" alt="ITCC Logo" class="img-responsive logo" width="100px" height="100px"></a>
             </div>
             <div class="sidebar-scroll">
                 <nav>
