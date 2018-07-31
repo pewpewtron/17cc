@@ -2,26 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use DB;
+use Validator;
+use Redirect;
+use Mail;
+
+use Carbon\Carbon;
+
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input as input;
+use Illuminate\Support\Facades\Hash;
+
 use App\Dashboard;
 use App\Participant;
 use App\Verified_req;
 use App\File;
 use App\Competition;
 use App\ScoreReq;
-use Auth;
-use DB;
-use App\AdminMessageTemporary;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Input as input;
-use Illuminate\Support\Facades\Hash;
-use App\Group;
-use App\Shirt;
-use Validator;
-use Redirect;
 use App\Videoapk;
 use App\Poster;
+use App\Admin;
+use App\Group;
+use App\Shirt;
+use App\AdminMessageTemporary;
+use App\Mail\VerificationUploaded;
+use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
@@ -400,9 +406,13 @@ class DashboardController extends Controller
         $data['request_at'] = Carbon::now();
         $data['filename'] = "verif_".Auth::user()->id.".".$request->file('photo')->getClientOriginalExtension();
         Verified_req::uploadVerification($request->file('photo'), $data['filename']);
-        Verified_req::create($data);
+        $verification = Verified_req::create($data);
 
-        
+        $comp_id = Auth::user()->competition_id;
+        $admins = Admin::where('competition_id', $comp_id)->get()->pluck('email')->toArray();
+        $email = new VerificationUploaded($verification);
+
+        Mail::to($admins)->send($email);
 
         return Redirect::back()->with('success', 'Berhasil upload verifikasi!');
     }
