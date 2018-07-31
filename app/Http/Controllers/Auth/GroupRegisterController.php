@@ -121,6 +121,10 @@ class GroupRegisterController extends Controller
         $data['photo'] = $request->competition_id."_".$request->full_name.".".$request->file('photo')->getClientOriginalExtension();
         $data['captain'] = 1;
         
+        if($data['competition_id']>3){
+            $data['buy_shirt'] = 1;
+        }
+
         Participant::uploadPhoto($request->file('photo'), $data['photo']);
         Participant::create($data);
         
@@ -128,7 +132,7 @@ class GroupRegisterController extends Controller
         $email = new EmailVerification($user);
 
         Mail::to($user->email)->send($email);
-        
+
         return redirect()->to('login')->with('success','Kami telah mengirim link untuk aktivasi akun anda, silakan cek email anda'); 
 
         /*return $this->registered($request, $user)
