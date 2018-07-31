@@ -143,7 +143,7 @@
                             <td>{{($participant->buy_shirt==1)?"Ya":"Tidak"}}</td>
                             <td>
                                 @if(Auth::user()->verified == 0)
-                                <a onclick="edit_participant(this)" data-id="{{$participant->id}}" class="btn btn-warning btn-sm edit" title="Edit" style="margin:2px;" data-toggle="modal" type="button" data-target="#modalEdit"><i class="glyphicon glyphicon-pencil"></i></a> 
+                                <a onclick="edit_participant(this)" data-id="{{$participant->id}}" data-capt="{{$participant->captain}}" class="btn btn-warning btn-sm edit" title="Edit" style="margin:2px;" data-toggle="modal" type="button" data-target="#modalEdit"><i class="glyphicon glyphicon-pencil"></i></a> 
                                     @if(!$participant->captain)
                                     <a onclick="del_participant(this)" data-post="{{ url('/dashboard', ['id' => $participant->id]) }}" class="btn btn-danger btn-sm" style="margin:2px;" title="Hapus" data-toggle="modal" type="button" data-target="#modalDelete"><i class="glyphicon glyphicon-trash"></i></a>
                                     @endif
@@ -207,26 +207,6 @@
                                 <small>Gambar dalam bentuk file jpeg dan png</small>                      
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Baju Peserta</label>
-                            <div class="col-md-9">
-                                <label><input type="radio" id="baju_yes_add" value="1" name="buy_shirt"> Ya </label> <label><input type="radio" id="baju_no_add" value="0" name="buy_shirt"> Tidak</label><br>
-                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}. Jika ketua membeli baju, maka anggota lain otomatis juga membeli.</small>
-                            </div>
-                        </div>
-                        <div class="form-group" id="ukuran_baju_add" style="display: none;">
-                            <label class="control-label col-md-3">Ukuran Baju</label>
-                            <div class="col-md-9">
-                                <select id="select-ukuran" name="size" class="form-control" >
-                                    <option disabled selected>Pilih Ukuran Baju</option>
-                                    <option value="s">Small</option>
-                                    <option value="m">Medium</option> 
-                                    <option value="l">Large</option>
-                                    <option value="xl">Extra Large</option>          
-                                </select>
-                                <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2018. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
-                            </div>
-                        </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Tambah</button>
                         </div>
@@ -288,7 +268,7 @@
                                 <small>Gambar dalam bentuk file .jpg</small>                      
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="baju_peserta" style="display: none">
                             <label class="control-label col-md-3">Baju Peserta</label>
                             <div class="col-md-9">
                                 <label><input type="radio" id="baju_yes_edit" value="1" name="buy_shirt"> Ya </label> <label><input type="radio" id="baju_no_edit" value="0" name="buy_shirt"> Tidak</label><br>
@@ -433,8 +413,15 @@
 <script>
     function edit_participant(e){
         id = $(e).attr('data-id');
+        is_captain = $(e).attr('data-capt');
         $('#formUpdate').attr('action', "dashboard/"+id);
         $('#modalEdit').show();
+
+        $('#baju_peserta').hide();
+
+        if(is_captain == 1){
+            $('#baju_peserta').show();
+        }
         
         $("#participant_id").val(id);
 
@@ -484,12 +471,6 @@
 	});
 	$('#baju_no_edit').click(function(e){
 		$('#ukuran_baju_edit').hide();
-	});
-	$('#baju_yes_add').click(function(e){
-		$('#ukuran_baju_add').show();
-	});
-	$('#baju_no_add').click(function(e){
-		$('#ukuran_baju_add').hide();
 	});
 
 </script>
