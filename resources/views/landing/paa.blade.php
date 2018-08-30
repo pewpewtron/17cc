@@ -183,55 +183,31 @@ Pengembangan Aplikasi Android - ITCC 2018
     					<div class="timeline wow fadeInRight">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">31<sup>st</sup></span>
-    								<span class="month">Agust</span>
+    								<span class="day">30<sup>th</sup></span>
+    								<span class="month">Sept</span>
     								<span class="year">2018</span>
     							</span>
     							<h2 class="title">Penutupan Pendaftaran</h2>
-    							<p class="description text-center">Penutupan pendaftaran lomba</p>
+    							<p class="description text-center">Penutupan pendaftaran lomba dan penutupan submisi tahap 1</p>
     						</div>
     					</div>
 
     					<div class="timeline wow fadeInLeft">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">19<sup>th</sup></span>
-    								<span class="month">Sept</span>
+    								<span class="day">8<sup>th</sup></span>
+    								<span class="month">Okt</span>
     								<span class="year">2018</span>
     							</span>
-    							<h2 class="title">Batas Akhir Submisi Tahap 1</h2>
-    							<p class="description text-center">Batas akhir pengumpulan submisi tahap 1</p>
+    							<h2 class="title">Pengumuman Submisi Tahap 1</h2>
+    							<p class="description text-center">Pengumuman hasil submisi tahap 1 dan pembukaan submisi tahap 2</p>
     						</div>
     					</div>
 
     					<div class="timeline wow fadeInRight">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">26<sup>th</sup></span>
-    								<span class="month">Sept</span>
-    								<span class="year">2018</span>
-    							</span>
-    							<h2 class="title">Pengumuman Hasil Submisi Tahap 1</h2>
-    							<p class="description text-center">Pengumuman tim yang lolos ke tahap selanjutnya</p>
-    						</div>
-    					</div>
-
-    					<div class="timeline wow fadeInLeft">
-    						<div class="timeline-content">
-    							<span class="date">
-    								<span class="day">27<sup>th</sup></span>
-    								<span class="month">Sept</span>
-    								<span class="year">2018</span>
-    							</span>
-    							<h2 class="title">Pembukaan Submisi Tahap 2</h2>
-    							<p class="description text-center">Pembukaan pengumpulan submisi tahap 2</p>
-    						</div>
-    					</div>
-
-    					<div class="timeline wow fadeInRight">
-    						<div class="timeline-content">
-    							<span class="date">
-    								<span class="day">11<sup>st</sup></span>
+    								<span class="day">22<sup>nd</sup></span>
     								<span class="month">Okt</span>
     								<span class="year">2018</span>
     							</span>
@@ -243,12 +219,36 @@ Pengembangan Aplikasi Android - ITCC 2018
     					<div class="timeline wow fadeInLeft">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">23<sup>rd</sup></span>
+    								<span class="day">30<sup>th</sup></span>
     								<span class="month">Okt</span>
     								<span class="year">2018</span>
     							</span>
     							<h2 class="title">Pengumuman Finalis</h2>
-    							<p class="description text-center">Pengumuman tim yang lolos ke babak final</p>
+    							<p class="description text-center">Pengumuman finalis lomba</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInRight">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">31<sup>st</sup></span>
+    								<span class="month">Okt</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Pre-Final</h2>
+    							<p class="description text-center">Pembukaan pre-final cabang lomba Pengembangan Aplikasi Android</p>
+    						</div>
+    					</div>
+
+    					<div class="timeline wow fadeInLeft">
+    						<div class="timeline-content">
+    							<span class="date">
+    								<span class="day">7<sup>th</sup></span>
+    								<span class="month">Nov</span>
+    								<span class="year">2018</span>
+    							</span>
+    							<h2 class="title">Pre-Final</h2>
+    							<p class="description text-center">Penutupan pre-final cabang lomba Pengembangan Aplikasi Android</p>
     						</div>
     					</div>
 
