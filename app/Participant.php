@@ -7,7 +7,7 @@ use App\Competition;
 
 class Participant extends Model
 {
-    public static $dir_photo = "uploads/identitas";
+    public static $dir_photo = "/uploads/identitas/";
 
     protected $fillable = [
         'group_id',
@@ -40,7 +40,7 @@ class Participant extends Model
     }
 
     public static function uploadPhoto($file, $file_name){
-        $destinationPath = public_path(self::$dir_photo);
+        $destinationPath = public_path(Participant::$dir_photo);
         return $file->move($destinationPath, $file_name);
     }
 

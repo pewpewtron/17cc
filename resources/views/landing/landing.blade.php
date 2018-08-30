@@ -26,7 +26,7 @@ ITCC 2018
 <li class="menu-has-children"><a href="#">Pendaftaran</a>
     <ul>
       <li><a href="/daftar/pemrograman">Lomba Pemrograman</a></li>
-      <li><a href="/daftar/desainweb">Lomba Desan Web</a></li>
+      <li><a href="/daftar/desainweb">Lomba Desain Web</a></li>
       <li><a href="/daftar/cerdascermat">Lomba Cerdas Cermat</a></li>
       <li><a href="/daftar/android">Lomba Pengembangan Aplikasi Android</a></li>
       <li><a href="/daftar/idebisnis">Lomba Pengembangan Ide Bisnis TIK</a></li>
@@ -237,15 +237,22 @@ ITCC 2018
                         	<p style="color: #202a2d; text-align: justify;">
                            Pendaftaran ITCC 2018 akan dibuka pada tanggal 1 Agustus 2018 untuk semua cabang lomba. Cabang Lomba Kategori SMA/SMK/Sederajat dibuka dalam dua gelombang yaitu Gelombang I mulai tanggal 1 Agustus 2018 sampai 31 Agustus 2018 dan Gelombang II mulai tanggal 1 September 2018 sampai 30 September 2018. Cabang Lomba Kategori Mahasiswa/Umum dibuka hanya satu gelombang mulai tanggal 1 Agustus 2018 sampai 31 September 2018.<br><br>
                            <b>Guide Book</b> masing-masing cabang lomba dapat diunduh pada tautan dibawah ini.<br>
-                           <a href="/guidebook/GUIDEBOOK_LCC_ITCC_2018_v1.0.pdf">Cabang Lomba Cerdas Cermat</a><br>
-                           <a href="/guidebook/GUIDEBOOK_DESAIN_WEB_ITCC_2018_v1.0.pdf">Cabang Lomba Desain Web</a><br>
-                           <a href="/guidebook/GUIDEBOOK_PEMROGRAMAN_ITCC_2018_v1.0.pdf">Cabang Lomba Pemrograman</a><br>
-                           <a href="/guidebook/GUIDEBOOK_IDEA_ITCC_2018_v1.0.pdf">Cabang Lomba Pengembangan Ide Bisnis TIK</a><br>
-                           <a href="/guidebook/GUIDEBOOK_ANDROID_ITCC_2018_v1.0.pdf">Cabang Lomba Pengembangan Aplikasi Android</a><br>
+                           <a href="/guidebook/GUIDEBOOK_LCC_ITCC_2018.pdf">Cabang Lomba Cerdas Cermat</a><br>
+                           <a href="/guidebook/GUIDEBOOK_DESAIN_WEB_ITCC_2018.pdf">Cabang Lomba Desain Web</a><br>
+                           <a href="/guidebook/GUIDEBOOK_PEMROGRAMAN_ITCC_2018.pdf">Cabang Lomba Pemrograman</a><br>
+                           <a href="/guidebook/GUIDEBOOK_IDEA_ITCC_2018.pdf">Cabang Lomba Pengembangan Ide Bisnis TIK</a><br>
+                           <a href="/guidebook/GUIDEBOOK_ANDROID_ITCC_2018.pdf">Cabang Lomba Pengembangan Aplikasi Android</a><br>
                           </p>
                   		</li>
-                  		{{-- <hr style="background-color:#202a2d; "> --}}
-                  		
+                  		<hr style="background-color:#202a2d; ">
+                  		<li>
+                        <h3 style="margin: 0px;color: #0575e6;  margin-top: 10px;">Plugin Cabang Lomba Desain Web</h3>
+                        <span class="fa fa-clock-o" style="font-size: 12px;"> 1 Agustus 2018</span> 
+                          <p style="color: #202a2d; text-align: justify;">
+                           Plugin web yang dapat digunakan pada Cabang Lomba Desain Web dapat diunduh pada tautan berikut ini.<br>
+                           <a href="/download/plugin.zip">Plugin Web</a><br>
+                          </p>
+                      </li>
                 	</ul>
              	 </div>
             </div>
@@ -489,8 +496,8 @@ ITCC 2018
             <div class="timeline wow fadeInLeft">
               <div class="timeline-content">
                 <span class="date">
-                  <span class="day">28<sup>th</sup></span>
-                  <span class="month">Okt</span>
+                  <span class="day">11<sup>st</sup></span>
+                  <span class="month">Nov</span>
                   <span class="year">2018</span>
                 </span>
                 <h2 class="title">Technical Meeting</h2>
@@ -508,8 +515,8 @@ ITCC 2018
             <div class="timeline wow fadeInRight">
               <div class="timeline-content">
                 <span class="date">
-                  <span class="day">30<sup>th</sup></span>
-                  <span class="month">Okt</span>
+                  <span class="day">13<sup>rd</sup></span>
+                  <span class="month">Nov</span>
                   <span class="year">2018</span>
                 </span>
                 <h2 class="title">Technical Meeting</h2>
@@ -526,7 +533,7 @@ ITCC 2018
             <div class="timeline wow fadeInLeft">
               <div class="timeline-content">
                 <span class="date">
-                  <span class="day">1<sup>st</sup></span>
+                  <span class="day">15<sup>th</sup></span>
                   <span class="month">Nov</span>
                   <span class="year">2018</span>
                 </span>
@@ -549,7 +556,7 @@ ITCC 2018
             <div class="timeline wow fadeInRight">
               <div class="timeline-content">
                 <span class="date">
-                  <span class="day">2<sup>nd</sup></span>
+                  <span class="day">16<sup>th</sup></span>
                   <span class="month">Nov</span>
                   <span class="year">2018</span>
                 </span>

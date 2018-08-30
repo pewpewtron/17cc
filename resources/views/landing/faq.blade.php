@@ -43,7 +43,7 @@
                                 Tunggu proses verifikasi selesai.<p></dd>
                             
                             <dt>Kartu Identitas Pada Saat Pendaftaran</dt>
-                            <dd style="padding: 10px;"><p>Kartu identitas yang dimaksud untuk kategori Pengembangan Ide Bisnis TIK adalah Kartu Tanda Penduduk atau jika tidak ada bisa menggunakan Kartu Tanda Siswa/Mahasiswa, untuk cabang lomba Sistem Informasi menggunakan Kartu Tanda Mahasiswa. Sedangkan untuk kategori Pemrograman, Desain Web dan juga Cerdas Cermat kartu identitas yang dimaksud adalah Kartu Tanda Siswa.</p></dd>
+                            <dd style="padding: 10px;"><p>Kartu identitas yang dimaksud adalah KTP/Kartu Tanda Mahasiswa/Kartu Pelajar.</p></dd>
                             
                             <dt>Lokasi Lomba Diadakan</dt>
                             <dd>Lokasi lomba akan diadakan di kampus Teknologi Informasi Udayana Bukit, Jimbaran. (<a target="_blank" href="#" style="color: #021b79;">Google Maps</a>)</dd>

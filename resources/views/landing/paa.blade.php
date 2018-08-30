@@ -54,7 +54,7 @@ Pengembangan Aplikasi Android - ITCC 2018
 	  			<p style="font-size: 16px;">Pengembangan Aplikasi Android merupakan salah satu perlombaan yang ada dalam kegiatan ITCC 2018, kompetisi ini membangun aplikasi mobile berbasis platform Android yang ditujukan bagi developer aplikasi mobile untuk menuangkan ide, kreatifitas, dan inovasinya untuk lingkungan dan masyrakat sekitar.
 				Pengembangan Aplikasi Android ditujukan untuk mahasiswa aktif sarjana dan diploma diseluruh Indonesia. Peserta berkompetisi dalam bentuk tim yang beranggotakan maksimal tiga orang dengan biaya pendaftaran sebesar Rp. 150.000.</p>
 	  		</div>
-	  		<a href="/guidebook/GUIDEBOOK_ANDROID_ITCC_2018_v1.0.pdf" class="btn-get-started">Download Guide Book</a>
+	  		<a href="/guidebook/GUIDEBOOK_ANDROID_ITCC_2018.pdf" class="btn-get-started">Download Guide Book</a>
   		</center>
 
   	</div>
@@ -255,8 +255,8 @@ Pengembangan Aplikasi Android - ITCC 2018
     					<div class="timeline wow fadeInRight">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">30<sup>th</sup></span>
-    								<span class="month">Okt</span>
+    								<span class="day">13<sup>rd</sup></span>
+    								<span class="month">Nov</span>
     								<span class="year">2018</span>
     							</span>
     							<h2 class="title">Technical Meeting</h2>
@@ -267,7 +267,7 @@ Pengembangan Aplikasi Android - ITCC 2018
     					<div class="timeline wow fadeInLeft">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">1<sup>st</sup></span>
+    								<span class="day">15<sup>th</sup></span>
     								<span class="month">Nov</span>
     								<span class="year">2018</span>
     							</span>
@@ -279,7 +279,7 @@ Pengembangan Aplikasi Android - ITCC 2018
     					<div class="timeline wow fadeInRight">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">2<sup>nd</sup></span>
+    								<span class="day">16<sup>th</sup></span>
     								<span class="month">Nov</span>
     								<span class="year">2018</span>
     							</span>

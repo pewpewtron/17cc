@@ -53,7 +53,7 @@ Pemrograman - ITCC 2018
 	  		<div class="row col-md-9" style="margin-top: 40px;">
 	  			<p style="font-size: 16px;">Cabang Lomba Pemrograman merupakan salah satu perlombaan yang ada dalam kegiatan ITCC 2018 yang dikhususkan untuk pelajar tingkat SMA/SMK sederajat Se-Bali.<br>Cabang lomba pemrograman bertujuan untuk menjaring siswa/siswi SMA/SMK ataupun jenjang yang sederajat seluruh Bali yang memiliki kompetensi di bidang komputer khususnya logika komputasi dan pemrograman.<br>Cabang lomba pemrograman merupakan jenis perlombaan individu dengan biaya pendaftaran mulai Rp. 75.000,- untuk setiap peserta.</p>
 	  		</div>
-	  		<a href="/guidebook/GUIDEBOOK_PEMROGRAMAN_ITCC_2018_v1.0.pdf" class="btn-get-started">Download Guide Book</a>
+	  		<a href="/guidebook/GUIDEBOOK_PEMROGRAMAN_ITCC_2018.pdf" class="btn-get-started">Download Guide Book</a>
   		</center>
 
   	</div>
@@ -223,8 +223,8 @@ Pemrograman - ITCC 2018
     					<div class="timeline wow fadeInLeft">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">28<sup>th</sup></span>
-    								<span class="month">Okt</span>
+    								<span class="day">11<sup>st</sup></span>
+    								<span class="month">Nov</span>
     								<span class="year">2018</span>
     							</span>
     							<h2 class="title">Technical Meeting</h2>
@@ -235,7 +235,7 @@ Pemrograman - ITCC 2018
     					<div class="timeline wow fadeInRight">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">1<sup>st</sup></span>
+    								<span class="day">15<sup>th</sup></span>
     								<span class="month">Nov</span>
     								<span class="year">2018</span>
     							</span>
@@ -247,7 +247,7 @@ Pemrograman - ITCC 2018
     					<div class="timeline wow fadeInLeft">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">2<sup>nd</sup></span>
+    								<span class="day">16<sup>th</sup></span>
     								<span class="month">Nov</span>
     								<span class="year">2018</span>
     							</span>

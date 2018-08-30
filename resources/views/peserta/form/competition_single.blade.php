@@ -130,11 +130,12 @@
 	                                <option value="l">Large</option>
 	                                <option value="xl">Extra Large</option>          
                                 </select>
-                                <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2017. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
+                                <small>*Desain baju dapat dilihat </small> <a data-toggle="modal" data-target="#sizeChart" href="#">disini</a>
                           </div>
                         </div>
         			</div>
         		</div>
+
 
         		<div class="card mb-2" style="border-radius: 0px">
         			<div class="card-body" style="padding: 32px;">
@@ -189,6 +190,19 @@
     	</div>
     </div>
 </div>
+
+<!--Modal-->
+<div class="modal fade" id="sizeChart" role="dialog">
+    <div class="modal-dialog modal-lg"> 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="{{ asset('/sponsor/desain.jpg') }}" style="max-height: 530px;">
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Modal-->
 <!--//HEADER WEBSITE-->
 <script>
 	$('#baju-yes').click(function(e){

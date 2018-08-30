@@ -37,7 +37,7 @@
            				<div class="form-group row">
              				<label for="institution" class="col-md-3 col-form-label">Asal Institusi</label>
              				<div class="col-md-9">
-                 				<input value="{{old('institution')}}" class="form-control{{ $errors->has('institution') ? ' is-invalid' : '' }}" placeholder="ex. 'Universitas Udayana'" name="institution" type="text">
+                 				<input value="{{old('institution')}}" class="form-control{{ $errors->has('institution') ? ' is-invalid' : '' }}" placeholder="ex. 'Universitas Udayana' atau 'SMA Negeri 1 Abcd'" name="institution" type="text">
                  				@if ($errors->has('institution'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('institution') }}</strong>
@@ -162,7 +162,7 @@
                                     <option value="l">Large</option>
                                     <option value="xl">Extra Large</option>          
                                 </select>
-                                <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2018. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
+                                <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2018. Desain dapat dilihat </small> <a data-toggle="modal" data-target="#sizeChart" href="#">disini</a>
                                 @if ($errors->has('size'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('size') }}</strong>
@@ -224,6 +224,19 @@
     </div>
 </div>
 <!--//HEADER WEBSITE-->
+
+<!--Modal-->
+<div class="modal fade" id="sizeChart" role="dialog">
+    <div class="modal-dialog modal-lg"> 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="{{ asset('/sponsor/desain.jpg') }}" style="max-height: 530px;">
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Modal-->
 <script>
 	$('#baju-yes').click(function(e){
 		$('#ukuran-baju').show();

@@ -133,7 +133,7 @@
                     <tbody>
                         @foreach($participants as $participant)
                         <tr>
-                            <td><img width="100" src="{{asset('uploads\\identitas\\'.$participant->photo)}}" /></td>
+                            <td><img width="100" src="{{asset('uploads/identitas/'.$participant->photo)}}" /></td>
                             <td>{{($participant->code=='')?"Belum Verifikasi":$participant->code}}</td>
                             <td>{{$participant->full_name}}</td>
                             <td>{{date('d-m-Y', strtotime($participant->birthdate))}}</td>
@@ -286,13 +286,16 @@
                                 <small>Gambar dalam bentuk file .jpg</small>                      
                             </div>
                         </div>
-                        <div class="form-group" id="baju_peserta" style="display: none">
+
+
+                        <div class="form-group" id="baju_peserta" style="display: none;">
                             <label class="control-label col-md-3">Baju Peserta</label>
                             <div class="col-md-9">
                                 <label><input type="radio" id="baju_yes_edit" value="1" name="buy_shirt"> Ya </label> <label><input type="radio" id="baju_no_edit" value="0" name="buy_shirt"> Tidak</label><br>
-                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}. Jika ketua membeli baju, maka anggota lain otomatis juga membeli.</small>
+                                <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp{{$biaya_baju}}. Jika ketua membeli baju, maka anggota lain otomatis juga membeli. (*kecuali Kategori Mahasiswa/Umum)</small>
                             </div>
                         </div>
+                        
                         <div class="form-group" id="ukuran_baju_edit" style="">
                             <label class="control-label col-md-3">Ukuran Baju</label>
                             <div class="col-md-9">
@@ -384,7 +387,7 @@
                         <div class="col-md-5">
                             <center>
                                 <img src="asset/icon/13.png" style="width: 25%; margin-bottom: 5px;">
-                                <p>Upload berkas untuk keperluan lomba (khusus lomba desain web, SI, IDEA)</p>
+                                <p>Upload berkas untuk keperluan lomba (khusus Pengembangan Aplikasi Android dan Ide Bisnis TIK)</p>
                             </center>
                         </div>
                         <div class="col-md-2 visible-lg">

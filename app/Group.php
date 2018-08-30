@@ -43,8 +43,10 @@ class Group extends Authenticatable
 
         if ($this->competition_id == 1 or $this->competition_id == 2) {
             $total = Shirt::find(1)->price;
-        }else{
+        }else if($this->competition_id == 3){
             $total = Shirt::find(1)->price*3;
+        }else{
+            $total = 0;
         }
         // $result = $this->join('participants','participants.group_id','=','groups.id')
         //         ->leftJoin('shirts','shirts.size','=','participants.size')

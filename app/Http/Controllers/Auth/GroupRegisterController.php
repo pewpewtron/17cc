@@ -116,14 +116,13 @@ class GroupRegisterController extends Controller
 
         //$this->guard()->login($user);
         
+        if ($request->competition_id > 3) {
+            $data['buy_shirt'] = 1;
+        }        
 
         $data['group_id'] = $user->id;
         $data['photo'] = $request->competition_id."_".$request->full_name.".".$request->file('photo')->getClientOriginalExtension();
         $data['captain'] = 1;
-        
-        if($data['competition_id']>3){
-            $data['buy_shirt'] = 1;
-        }
 
         Participant::uploadPhoto($request->file('photo'), $data['photo']);
         Participant::create($data);

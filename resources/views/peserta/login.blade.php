@@ -54,7 +54,7 @@
 	                     		<div class="col-md-4 login-page" style="background: #343b40; height: 450px;">
 				                    <img src="asset/images/logo-itcc5.png" style="width: 70%;margin-left: 35px;margin-top: 70px;" class="img-responsive center-block ">
 				                    <h3 style="color: white; text-align: center;">Tema ITCC 2018</h3>
-				                    <h4 style="color:#a2c8cc; text-align: center;">"Tema"</h4>
+				                    <h4 style="color:#a2c8cc; text-align: center;">"Powering Smart Society with Information Technology"</h4>
 				                    <hr style="width: 80%; color: white; margin-bottom: 5px;">
 				                    <p style="margin-left: 35px;"><a href="https://www.facebook.com/ITCC.Udayana"><img style="width: 30px;" src="asset/images/facebook.png"></a><a href="https://twitter.com/ITCCUdayana"><img style="width: 30px;" src="asset/images/twitter.png"></a><a href="https://www.instagram.com/itcc_udayana/"><img style="width: 30px;" src="asset/images/instagram.png"></a><a href="https://ask.fm/itcc_udayana"><img style="width: 30px;" src="asset/images/Askfm.png"></a><a href="https://bit.ly/ITCCUdayana"><img style="width: 30px;" src="asset/images/line.png"></a></p>
 	                        

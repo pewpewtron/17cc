@@ -101,7 +101,7 @@
 			              <hr>
 			            </center>
                   <div class="row col-sm-12">
-                    <img src="{{ url('/sponsor/sponsor.jpg') }}" style="max-height: 150px;">
+                    <img src="{{ url('/sponsor/sponsor.jpg') }}" class="col-sm-12" style="max-height: 150px">
                   </div>
 		         	</div>
 
@@ -111,7 +111,7 @@
 		              		<hr>
 		            	</center>
                   <div class="row col-sm-12">
-                    <img src="{{ url('/sponsor/media.jpg') }}" style="max-height: 150px;">
+                    <img src="{{ url('/sponsor/media.jpg') }}" class="col-sm-12" style="max-height: 150px">
                   </div>
 		          	</div>
 	        

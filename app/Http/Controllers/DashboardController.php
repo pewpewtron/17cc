@@ -247,7 +247,7 @@ class DashboardController extends Controller
     public function showVerificationForm()
     {
         if (Auth::user()->competition_id == 3 or Auth::user()->competition_id == 4 or Auth::user()->competition_id == 5) {
-            if (count(Auth::user()->participants) != 3) {
+            if (count(Auth::user()->participants) < 2) {
                 return redirect('/dashboard')->with('warning', 'Input Data Tim Anda sebelum masuk ke menu Upload Bukti Pembayaran');
             }
         }
