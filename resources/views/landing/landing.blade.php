@@ -313,7 +313,7 @@ ITCC 2018
                     <span class="badge badge-info">Pengembangan Aplikasi Android</span>
                 </p>
                 <p class="description text-center">
-                  Penutupan pendaftaran lomba kategori Mahasiswa dan Umum se-Indonesia<br>Penutupan pendaftaran gelombang 1 lomba kategori SMA/SMK/Sederajat se-Bali
+                  Penutupan pendaftaran gelombang 1 lomba kategori SMA/SMK/Sederajat se-Bali
                 </p>
               </div>
             </div>
@@ -337,58 +337,6 @@ ITCC 2018
               </div>
             </div>
 
-            <div class="timeline wow fadeInRight">
-              <div class="timeline-content">
-                <span class="date">
-                  <span class="day">19<sup>th</sup></span>
-                  <span class="month">Sept</span>
-                  <span class="year">2018</span>
-                </span>
-                <h2 class="title">Batas Akhir Pengumpulan Berkas</h2>
-                <p class="text-center description" style="font-size: 15px;">
-                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                  <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                </p>
-                <p class="description text-center">
-                  Batas akhir pengumpulan submisi tahap 1 cabang lomba <b>Pengembangan Aplikasi Android</b> <br> Batas akhir pengumpulan proposal cabang lomba <b>Pengembangan Ide Bisnis TIK</b>
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline wow fadeInLeft">
-              <div class="timeline-content">
-                <span class="date">
-                  <span class="day">26<sup>th</sup></span>
-                  <span class="month">Sept</span>
-                  <span class="year">2018</span>
-                </span>
-                <h2 class="title">Pengumuman Submisi Tahap 1</h2>
-                <p class="text-center description" style="font-size: 15px;">
-                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                </p>
-                <p class="description text-center">
-                  Pengumuman Hasil Submisi Tahap 1 Cabang Lomba Kategori Mahasiswa dan Umum
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline wow fadeInRight">
-              <div class="timeline-content">
-                <span class="date">
-                  <span class="day">27<sup>th</sup></span>
-                  <span class="month">Sept</span>
-                  <span class="year">2018</span>
-                </span>
-                <h2 class="title">Pembukaan Submisi Tahap 2</h2>
-                <p class="text-center description" style="font-size: 15px;">
-                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                </p>
-                <p class="description text-center">
-                  Pembukaan pengumpulan submisi tahap 2 cabang lomba Pengembangan Aplikasi Android
-                </p>
-              </div>
-            </div>
-
             <div class="timeline wow fadeInLeft">
               <div class="timeline-content">
                 <span class="date">
@@ -396,14 +344,16 @@ ITCC 2018
                   <span class="month">Sept</span>
                   <span class="year">2018</span>
                 </span>
-                <h2 class="title">Penutupan Pendaftaran Gelombang 2</h2>
+                <h2 class="title">Penutupan Pendaftaran</h2>
                 <p class="text-center description" style="font-size: 15px;">
                   <span class="badge badge-info">Desain Web</span>
                   <span class="badge badge-info">Cerdas Cermat</span>
                   <span class="badge badge-info">Pemrograman</span>
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                  <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                 </p>
                 <p class="description text-center">
-                  Penutupan pendaftaran gelombang 2 lomba kategori SMA/SMK/Sederajat se-Bali
+                  Penutupan pendaftaran gelombang 2 lomba kategori SMA/SMK/Sederajat se-Bali dan Penutupan pendaftaran lomba kategori mahasiswa dan umum se-Indonesia
                 </p>
               </div>
             </div>
@@ -411,7 +361,7 @@ ITCC 2018
             <div class="timeline wow fadeInRight">
               <div class="timeline-content">
                 <span class="date">
-                  <span class="day">11<sup>th</sup></span>
+                  <span class="day">8<sup>th</sup></span>
                   <span class="month">Okt</span>
                   <span class="year">2018</span>
                 </span>
@@ -420,7 +370,7 @@ ITCC 2018
                   <span class="badge badge-info">Pengembangan Aplikasi Android</span>
                 </p>
                 <p class="description text-center">
-                  Batas akhir pengumpulan submisi tahap 2 cabang lomba Pengembangan Aplikasi Android
+                  Batas akhir pengumpulan submisi tahap 1 cabang lomba Pengembangan Aplikasi Android dan pembukaan pengumpulan submisi tahap 2
                 </p>
               </div>
             </div>
@@ -449,12 +399,12 @@ ITCC 2018
                   <span class="month">Okt</span>
                   <span class="year">2018</span>
                 </span>
-                <h2 class="title">Pengumuman Finalis</h2>
+                <h2 class="title">Batas Akhir Pengumpulan Berkas</h2>
                 <p class="text-center description" style="font-size: 15px;">
                   <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                 </p>
                 <p class="description text-center">
-                  Pengumuman finalis cabang lomba Pengembangan Ide Bisnis TIK kategori Umum se-Indonesia
+                  Batas akhir pengumpulan proposal cabang lomba Pengembangan Ide Bisnis TIK
                 </p>
               </div>
             </div>
@@ -479,16 +429,68 @@ ITCC 2018
             <div class="timeline wow fadeInRight">
               <div class="timeline-content">
                 <span class="date">
-                  <span class="day">23<sup>th</sup></span>
+                  <span class="day">22<sup>th</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Batas Akhir Pengumpulan Berkas</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">
+                  Batas akhir pengumpulan submisi tahap 2 cabang lomba Pengembangan Aplikasi Android kategori Mahasiswa se-Indonesia
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">30<sup>th</sup></span>
                   <span class="month">Okt</span>
                   <span class="year">2018</span>
                 </span>
                 <h2 class="title">Pengumuman Finalis</h2>
                 <p class="text-center description" style="font-size: 15px;">
                   <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                  <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                 </p>
                 <p class="description text-center">
-                  Pengumuman finalis cabang lomba Pengembangan Aplikasi Android kategori Mahasiswa se-Indonesia
+                  Pengumuman finalis cabang lomba kategori Mahasiswa dan Umum se-Indonesia
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">31<sup>st</sup></span>
+                  <span class="month">Okt</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Pre-Final</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">
+                  Pembukaan Pre-final cabang lomba Pengembangan Aplikasi Android kategori Mahasiswa se-Indonesia
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-content">
+                <span class="date">
+                  <span class="day">7<sup>th</sup></span>
+                  <span class="month">Nov</span>
+                  <span class="year">2018</span>
+                </span>
+                <h2 class="title">Pre-Final</h2>
+                <p class="text-center description" style="font-size: 15px;">
+                  <span class="badge badge-info">Pengembangan Aplikasi Android</span>
+                </p>
+                <p class="description text-center">
+                  Penutupan Pre-final cabang lomba Pengembangan Aplikasi Android kategori Mahasiswa se-Indonesia
                 </p>
               </div>
             </div>
