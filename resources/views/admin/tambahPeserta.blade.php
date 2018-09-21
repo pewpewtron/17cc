@@ -25,7 +25,8 @@
 					<div class="box" style="margin-top: 30px;">
 						<div class="box-body">
 							<form action="/simpan" class="form-horizontal" method="post" enctype="multipart/form-data">
-                @csrf
+                 {{ csrf_field() }}
+                 
 								<div style="border-style: solid; border-width: 1px;padding: 8px 8px;">
 									<h4><center>Data Diri</center></h4>
 

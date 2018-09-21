@@ -78,6 +78,11 @@ class Group extends Authenticatable
         return $this->hasOne('App\File');
     }
 
+    public function berkasWeb()
+    {
+        return $this->hasOne('App\BerkasWeb');
+    }
+
     public function participants(){
         return $this->hasMany('App\Participant');
     }

@@ -22,6 +22,7 @@ use App\Competition;
 use App\ScoreReq;
 use App\Videoapk;
 use App\Poster;
+use App\BerkasWeb;
 use App\Admin;
 use App\Group;
 use App\Shirt;
@@ -366,6 +367,48 @@ class DashboardController extends Controller
         $link = Videoapk::create($data);
 
         return redirect('/uploadVideoAPK')->with('success', 'Berhasil upload tautan!');
+    }
+
+    public function showUploadBerkasForm()
+    {
+        if (Auth::user()->competition_id != 2) {
+            return redirect('dashboard');
+        }
+
+        if (Auth::user()->verified_email!=1) {
+            return redirect('dashboard')->with('warning', 'Mohon melakukan verifikasi email terlebih dahulu!');
+        }
+
+        if (Auth::user()->verified != 1) {
+            return redirect('dashboard')->with('warning', 'Mohon maaf, Anda belum menjadi Peserta san. Unggah bukti pembayaran anda dan tunggu Panitia untuk melakukan verifikasi.');
+        }
+
+
+        $jumlahPesan = AdminMessageTemporary::where('group_id','=', Auth::user()->id)
+            ->where('view','=', 0)
+            ->get();
+        
+        return view('peserta.uploadBerkasWeb', compact('jumlahPesan'));
+    }
+
+    public function uploadBerkasWeb(Request $request)
+    {
+        $this->validate($request, [
+            'file' => 'required|max:1000|mimes:rar,zip',
+        ]);
+
+        $file = Auth::user()->berkasWeb;
+        if($file != null){
+            $file->delete();
+        }
+
+        $data = $request->all();
+        $data['group_id'] = Auth::user()->id;
+        $data['file'] = "bahan_web_".Auth::user()->id."_".Auth::user()->group_name.".".$request->file('file')->getClientOriginalExtension();
+        BerkasWeb::upload($request->file('file'), $data['file']);
+        BerkasWeb::create($data);
+
+        return Redirect::back()->with('success', 'Berhasil upload berkas web!');
     }
 
     public function showSettingForm()

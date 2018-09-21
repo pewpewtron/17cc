@@ -12,6 +12,7 @@ use App\UserMessageTemporary;
 use App\Jury;
 use Carbon\Carbon;
 use App\Competition;
+use App\BerkasWeb;
 use App\Notifications\NotifToInboxAfterVerification;
 use PDF;
 use Mail;
@@ -377,5 +378,20 @@ class AdminController extends Controller
         // return view('admin.print', compact('participants'));
         $table = PDF::loadview('admin.print', compact('participants'));
         return $table->stream('peserta_'.Auth::user()->competition->long_name.'.pdf');
+    }
+
+    public function showBerkasWeb()
+    {
+        if (Auth::user()->competition_id != 2) {
+            return redirect('admin')->with('warning', 'Anda tidak bisa mengakses alamat ini');
+        }
+
+        $berkas = Group::with('berkasWeb')
+            // ->join('participants', 'participants.group_id','=','groups.id')
+            ->where('competition_id', Auth::user()->competition_id)
+            ->get();
+
+        // return $berkas;
+        return view('admin.berkasWeb', compact('berkas'));
     }
 }
