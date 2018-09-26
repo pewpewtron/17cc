@@ -124,7 +124,7 @@
                                 <label class="col-md-3 col-form-label">Baju Peserta</label>
                                 <div class="col-md-9">
                                     <label><input {{ old('buy_shirt')=="1"?"checked":"" }} type="radio" id="baju-yes" class="{{ $errors->has('buy_shirt') ? ' is-invalid' : '' }}" value="1" name="buy_shirt"> Ya </label> <label><input {{ old('buy_shirt')=="0"?"checked":"" }} type="radio" id="baju-no" class="{{ $errors->has('buy_shirt') ? ' is-invalid' : '' }}" value="0" name="buy_shirt"> Tidak</label><br>
-                                    <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp</small><small id="harga_baju">{{$harga_baju}}</small>
+                                    <small>Apabila Anda membeli baju peserta, akan dikenakan biaya tambahan sebesar Rp</small><small id="harga_baju">{{$harga_baju}} dan apabila anda ingin membeli maka otomatis anggota tim anda juga membeli</small>
                                     @if ($errors->has('buy_shirt'))
                                         <span class="invalid-feedback">
                                             <strong>{{ $errors->first('buy_shirt') }}</strong>
@@ -143,7 +143,7 @@
                                         <option value="l">Large</option>
                                         <option value="xl">Extra Large</option>          
                                     </select>
-                                    <small>*peserta yang lolos babak penyisihan akan mendapatkan baju official ITCC 2018. Size Chart dapat dilihat</small> <a data-toggle="modal" data-target="#sizeChart">DISINI</a>
+                                    <small>Desain dapat dilihat </small> <a data-toggle="modal" data-target="#sizeChart">disini</a>
                                     @if ($errors->has('size'))
                                         <span class="invalid-feedback">
                                             <strong>{{ $errors->first('size') }}</strong>

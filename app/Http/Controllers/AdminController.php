@@ -116,6 +116,7 @@ class AdminController extends Controller
 
     public function showFormVerifikasi()
     {
+
         $jumlahPesan = UserMessageTemporary::where('admin_id','=',Auth::user()->id)
             ->where('view','=',0)
             ->get();
@@ -125,20 +126,39 @@ class AdminController extends Controller
         // })->with('Group')->get();
 
 
+        // $verif_reqs = DB::table('verified_reqs')
+        //     ->join('groups','verified_reqs.group_id','=','groups.id')
+        //     ->join('competitions','groups.competition_id','=','competitions.id')
+        //     ->join('participants','participants.group_id','=','groups.id')
+        //     ->leftJoin('shirts','shirts.size','=','participants.size')
+        //     ->select('verified_reqs.*',
+        //             'groups.group_name',
+        //             'groups.institution', 
+        //             'groups.verified',
+        //             'groups.regist_cost',
+        //             DB::raw('sum(IFNULL(shirts.price,0)) as shirt_total'))
+        //     ->where('groups.competition_id','=',Auth::user()->competition_id)
+        //     ->where('groups.verified','!=',1)
+        //     ->orWhereNull('groups.verified')
+        //     ->groupBy('groups.id')
+        //     ->get();
+
+
         $verif_reqs = DB::table('verified_reqs')
             ->join('groups','verified_reqs.group_id','=','groups.id')
             ->join('competitions','groups.competition_id','=','competitions.id')
             ->join('participants','participants.group_id','=','groups.id')
-            ->leftJoin('shirts','shirts.size','=','participants.size')
+
             ->select('verified_reqs.*',
                     'groups.group_name',
                     'groups.institution', 
                     'groups.verified',
-                    'competitions.regist_cost',
-                    DB::raw('sum(IFNULL(shirts.price,0)) as shirt_total'))
-            ->where('groups.competition_id','=',Auth::user()->competition_id)
-            ->where('groups.verified','!=',1)
-            ->orWhereNull('groups.verified')
+                    'groups.regist_cost',
+                    'groups.competition_id',
+                    'participants.buy_shirt'
+                   )
+            ->where('groups.competition_id',Auth::user()->competition_id)
+            ->whereNull('groups.verified')
             ->groupBy('verified_reqs.group_id',
                         'verified_reqs.id',
                         'verified_reqs.request_at',
@@ -149,11 +169,15 @@ class AdminController extends Controller
                         'groups.group_name',
                         'groups.institution', 
                         'groups.verified',
-                        'competitions.regist_cost' )
+                        'groups.regist_cost',
+                        'groups.competition_id',
+                        'participants.buy_shirt')
+            // ->orWhereNull('groups.verified')
             ->get();
 
         $dir_file = Verified_req::$dir_verifikasi;
 
+        // return $verif_reqs;
 
         return view('admin.verifikasiAdmin', compact('jumlahPesan','verif_reqs', 'dir_file'));
     }
@@ -394,4 +418,25 @@ class AdminController extends Controller
         // return $berkas;
         return view('admin.berkasWeb', compact('berkas'));
     }
+
+    public function showPartisipantsUploadFileAndroid(){
+        $part = Group::leftJoin('files', 'files.group_id', '=', 'groups.id')
+            ->leftJoin('videoapks', 'videoapks.group_id', '=', 'groups.id')
+            ->where('competition_id', Auth::user()->competition_id)
+            ->selectRaw('groups.*, files.title, files.link as proposalLink, videoapks.link as videoLink')
+            ->get();
+
+        return view('admin.partisipantUploadFile', compact('part'));
+    }
+
+    public function showPartisipantsUploadFileIdea(){
+        $part = Group::leftJoin('files', 'files.group_id', '=', 'groups.id')
+            ->leftJoin('posters', 'posters.group_id', '=', 'groups.id')
+            ->where('competition_id', Auth::user()->competition_id)
+            ->selectRaw('groups.*, files.title, files.link as proposalLink, posters.file')
+            ->get();
+
+        return view('admin.partisipantUploadFileIdea', compact('part'));
+    }
+
 }

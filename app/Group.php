@@ -58,6 +58,7 @@ class Group extends Authenticatable
         return $total;
     }
 
+
     public function get_captain(){
         return $this->hasMany('App\Participant')->where('captain', "=", "1");
     }

@@ -182,8 +182,8 @@ Pengembangan Ide Bisnis TIK - ITCC 2018
     					<div class="timeline wow fadeInRight">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">31<sup>st</sup></span>
-    								<span class="month">Agust</span>
+    								<span class="day">30<sup>th</sup></span>
+    								<span class="month">Sept</span>
     								<span class="year">2018</span>
     							</span>
     							<h2 class="title">Penutupan Pendaftaran</h2>
@@ -194,8 +194,8 @@ Pengembangan Ide Bisnis TIK - ITCC 2018
     					<div class="timeline wow fadeInLeft">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">19<sup>th</sup></span>
-    								<span class="month">Sept</span>
+    								<span class="day">14<sup>th</sup></span>
+    								<span class="month">Okt</span>
     								<span class="year">2018</span>
     							</span>
     							<h2 class="title">Batas Pengumpulan Berkas</h2>
@@ -206,7 +206,7 @@ Pengembangan Ide Bisnis TIK - ITCC 2018
     					<div class="timeline wow fadeInRight">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">14<sup>th</sup></span>
+    								<span class="day">30<sup>th</sup></span>
     								<span class="month">Okt</span>
     								<span class="year">2018</span>
     							</span>
@@ -230,24 +230,12 @@ Pengembangan Ide Bisnis TIK - ITCC 2018
     					<div class="timeline wow fadeInRight">
     						<div class="timeline-content">
     							<span class="date">
-    								<span class="day">15<sup>th</sup></span>
-    								<span class="month">Nov</span>
-    								<span class="year">2018</span>
-    							</span>
-    							<h2 class="title">Hari Pertama ITCC 2018</h2>
-    							<p class="description text-center">Babak final</p>
-    						</div>
-    					</div>
-
-    					<div class="timeline wow fadeInLeft">
-    						<div class="timeline-content">
-    							<span class="date">
     								<span class="day">16<sup>th</sup></span>
     								<span class="month">Nov</span>
     								<span class="year">2018</span>
     							</span>
-    							<h2 class="title">Hari Kedua ITCC 2018</h2>
-    							<p class="description text-center">Penyerahan hadiah</p>
+    							<h2 class="title">Babak Final</h2>
+    							<p class="description text-center">Peserta mmempresentasikan ide yang masing-masing tim daftarkan</p>
     						</div>
     					</div>
 

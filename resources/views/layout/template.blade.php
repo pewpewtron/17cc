@@ -101,7 +101,9 @@
 			              <hr>
 			            </center>
                   <div class="row col-sm-12">
-                    <img src="{{ url('/sponsor/sponsor.jpg') }}" class="col-sm-12" style="max-height: 150px">
+                    <a href="https://www.mitrais.com/" target="_blank" title="Mitrais">
+                      <img src="{{ asset('sponsor/mitrais.PNG') }}" height="50">
+                    </a>
                   </div>
 		         	</div>
 
@@ -111,7 +113,7 @@
 		              		<hr>
 		            	</center>
                   <div class="row col-sm-12">
-                    <img src="{{ url('/sponsor/media.jpg') }}" class="col-sm-12" style="max-height: 150px">
+                    <img src="{{ url('/sponsor/media.jpg') }}" class="col-sm-12" style="max-height: 250px">
                   </div>
 		          	</div>
 	        

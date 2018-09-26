@@ -21,6 +21,10 @@ Route::get('/sendmail', function(){
     // Mail::to("maildummy888@gmail.com")->send($email);
     // return view('emails.new');
 });
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    // return what you want
+});
 
 Route::get('/', function () {
     return view('landing.landing');
@@ -169,3 +173,28 @@ Route::get('/juriSetting','JuryController@showFormSetting');
 Route::put('/juriSetting/{juriSetting}','JuryController@updateJuri');
 
 Route::get('/showform','JuryController@showFormDinamis');
+
+#Route untuk lihat file terupload
+Route::prefix('lihat-file-terupload-android')->group(function(){
+    Route::get('/', 'AdminController@showPartisipantsUploadFileAndroid')->name('lihatfile.index');
+});
+
+Route::prefix('lihat-file-terupload-idea')->group(function(){
+    Route::get('/', 'AdminController@showPartisipantsUploadFileIdea')->name('lihatfileIdea.index');
+});
+#
+
+Route::get('/admin/secret', function(){
+    $comp = App\Competition::join('groups', 'groups.competition_id', '=', 'competitions.id')
+        ->selectRaw('competitions.long_name, count(competition_id) as jml')->groupBy('competition_id', 'competitions.long_name')->get();
+
+    $compVerifiedEmail = App\Competition::join('groups', 'groups.competition_id', '=', 'competitions.id')
+        ->where('verified_email', 1)
+        ->selectRaw('competitions.long_name, count(competition_id) as jml')->groupBy('competition_id', 'competitions.long_name')->get();
+
+    $compVerifiedAll = App\Competition::join('groups', 'groups.competition_id', '=', 'competitions.id')
+        ->where('verified', 1)
+        ->selectRaw('competitions.long_name, count(competition_id) as jml')->groupBy('competition_id', 'competitions.long_name')->get();
+
+    return view('admin.secret', compact('comp', 'compVerifiedEmail', 'compVerifiedAll'));
+})->name('admin.secret');

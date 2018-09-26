@@ -46,8 +46,22 @@
 								<td>{{$verif_req->group_name}}</td>
 								<td>{{$verif_req->institution}}</td>
 								<td>{{number_format($verif_req->regist_cost,2)}}</td>
-								<td>{{number_format($verif_req->shirt_total,2)}}</td>
-								<td>{{number_format($verif_req->regist_cost + $verif_req->shirt_total,2)}}</td>
+								<td>
+									@php
+										$shirt = 0;
+										if ($verif_req->buy_shirt == 1){
+											if ($verif_req->competition_id == 1 or $verif_req->competition_id == 2) {
+							            $shirt = App\Shirt::find(1)->price;
+							        }else if($verif_req->competition_id == 3){
+							            $shirt = App\Shirt::find(1)->price*3;
+							        }else{
+							            $shirt = 0;
+							        }
+										}
+									@endphp	
+									{{number_format($shirt,2)}}
+								</td>
+								<td>{{number_format($verif_req->regist_cost + $shirt,2)}}</td>
 								<td><button onclick="showImage(this)" type="button" class="btn btn-info btn-sm" data-url="{{asset($dir_file.'/'.$verif_req->filename)}}" data-toggle="modal" data-target="#modalGambar"><i class="glyphicon glyphicon-picture"></i></button></td>
 								<td>{{$verif_req->created_at}}</td>
 								<td>{{$verif_req->note}}</td>

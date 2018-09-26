@@ -354,7 +354,7 @@ ITCC 2018
                   <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
                 </p>
                 <p class="description text-center">
-                  Penutupan pendaftaran gelombang 2 lomba kategori SMA/SMK/Sederajat se-Bali dan Penutupan pendaftaran lomba kategori mahasiswa dan umum se-Indonesia
+                  Penutupan pendaftaran gelombang 2 lomba kategori SMA/SMK/Sederajat se-Bali dan Penutupan pendaftaran lomba kategori mahasiswa dan umum se-Indonesia. Batas Akhir Pengumpulan berkas Submisi Tahap I
                 </p>
               </div>
             </div>
@@ -366,12 +366,12 @@ ITCC 2018
                   <span class="month">Okt</span>
                   <span class="year">2018</span>
                 </span>
-                <h2 class="title">Batas Akhir Pengumpulan Berkas</h2>
+                <h2 class="title">Pengumuman Submisi Tahap I</h2>
                 <p class="text-center description" style="font-size: 15px;">
                   <span class="badge badge-info">Pengembangan Aplikasi Android</span>
                 </p>
                 <p class="description text-center">
-                  Batas akhir pengumpulan submisi tahap 1 cabang lomba Pengembangan Aplikasi Android dan pembukaan pengumpulan submisi tahap 2
+                  Pengumuman hasil Submisi Tahap I sekaligus pembukaan pengumpulan Submisi Tahap II
                 </p>
               </div>
             </div>
@@ -589,241 +589,11 @@ ITCC 2018
   </div>
 
 </section>
-{{-- <section id="jadwal" class="cd-horizontal-timeline wow fadeInUp" style="background-color: #fff; padding-top: 40px; padding-bottom: 60px; margin-top: 0px;">
-    <div class="section-header">
-          <h3 class="section-title">Jadwal ITCC 2018</h3>
-    </div>
 
-  	<div class="timeline" style="margin-top: 50px;">
-    	<div class="events-wrapper">
-	      	<div class="events">
-	        	<ol>
-	          		<li><a href="#0" data-date="01/08/2018" class="selected">1 Agust</a></li>
-                <li><a href="#0" data-date="31/08/2018">31 Agust</a></li>
-                <li><a href="#0" data-date="01/09/2018">1 Sept</a></li>
-	          		<li><a href="#0" data-date="19/09/2018">19 Sept</a></li>
-                <li><a href="#0" data-date="26/09/2018">26 Sept</a></li>
-                <li><a href="#0" data-date="27/09/2018">27 Sept</a></li>
-                <li><a href="#0" data-date="30/09/2018">30 Sept</a></li>
-                <li><a href="#0" data-date="11/10/2018">11 Okt</a></li>
-                <li><a href="#0" data-date="12/10/2018">12 Okt</a></li>
-                <li><a href="#0" data-date="19/10/2018">19 Okt</a></li>
-                <li><a href="#0" data-date="23/10/2018">23 Okt</a></li>
-                <li><a href="#0" data-date="28/10/2018">28 Okt</a></li>
-                <li><a href="#0" data-date="30/10/2018">30 Okt</a></li>
-                <li><a href="#0" data-date="01/11/2018">1 Nov</a></li>
-                <li><a href="#0" data-date="02/11/2018">2 Nov</a></li>
-	        	</ol>
-
-	        	<span class="filling-line" aria-hidden="true"></span>
-	      	</div> <!-- .events -->
-    	</div> <!-- .events-wrapper -->
-      
-    	<ul class="cd-timeline-navigation">
-      		<li><a href="#0" class="prev inactive">Prev</a></li>
-      		<li><a href="#0" class="next">Next</a></li>
-    	</ul> <!-- .cd-timeline-navigation -->
-  	</div> <!-- .timeline -->
-
-  	<div class="events-content">
-    	<ol>
-      	<li class="selected" data-date="01/08/2018">
-        	<center>
-		        <h2 style="color: #000; font-size: 30px;">Pembukaan Pendaftaran</h2>
-		        <p style="font-size: 15px;"> 
-		            <span class="badge badge-info">Desain Web</span>
-                <span class="badge badge-info">Cerdas Cermat</span>
-                <span class="badge badge-info">Pemrograman</span>
-                <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-		        </p>
-            <p> 
-              Pembukaan pendaftaran gelombang 1 untuk cabang lomba kategori SMA/SMK dan Pembukaan pendaftaran untuk cabang lomba kategori Mahasiswa/Umum.
-            </p>
-        	</center>
-      	</li>
-
-        <li data-date="31/08/2018">
-          <center>
-            <h2 style="color: #000; font-size: 30px;">Penutupan Pendaftaran</h2>
-            <p style="font-size: 15px;"> 
-                <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                <span class="badge badge-info">Desain Web</span>
-                <span class="badge badge-info">Cerdas Cermat</span>
-                <span class="badge badge-info">Pemrograman</span>
-            </p>
-            <p>
-              Penutupan pendaftaran lomba kategori Mahasiswa dan Umum se-Indonesia<br>Penutupan pendaftaran gelombang 1 lomba kategori SMA/SMK/Sederajat se-Bali
-            </p>
-          </center>
-        </li>
-
-        <li data-date="01/09/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Pembukaan Pendaftaran Gelombang 2 SMA/SMK</h2>
-                <p style="font-size: 15px;">
-                  <span class="badge badge-info">Desain Web</span>
-                  <span class="badge badge-info">Cerdas Cermat</span>
-                  <span class="badge badge-info">Pemrograman</span>
-                </p>
-            </center>
-        </li>
-
-		    <li data-date="19/09/2018">
-		    	<center>
-		          	<h2 style="color: #000; font-size: 30px;">Batas Akhir Pengumpulan Submisi Tahap 1 Cabang Lomba Kategori Mahasiswa dan Umum</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                </p>
-		        </center>
-		    </li>
-
-        <li data-date="26/09/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Pengumuman Hasil Submisi Tahap 1 Cabang Lomba Kategori Mahasiswa dan Umum</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                </p>
-            </center>
-        </li>
-
-        <li data-date="27/09/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Pembukaan Submisi Tahap 2 Cabang Lomba Kategori Mahasiswa dan Umum</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                </p>
-            </center>
-        </li>
-
-        <li data-date="30/09/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Penutupan Pendaftaran Gelombang 2</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pemrograman</span>
-                    <span class="badge badge-info">Desain Web</span>
-                    <span class="badge badge-info">Cerdas Cermat</span>
-                </p>
-            </center>
-        </li>
-
-        <li data-date="11/10/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Batas Akhir Pengumpulan Submisi Tahap 2 Cabang Lomba Kategori Mahasiswa dan Umum</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                </p>
-            </center>
-        </li>
-
-        <li data-date="12/10/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Warming Up Hari Pertama</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pemrograman</span>
-                </p>
-            </center>
-        </li>
-
-        <li data-date="19/10/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Warming Up Hari Terakhir</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pemrograman</span>
-                </p>
-            </center>
-        </li>
-
-        <li data-date="23/10/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Pengumpulan Finalis</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                </p>
-            </center>
-        </li>
-
-        <li data-date="28/10/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Technical Meeting</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pemrograman</span>
-                    <span class="badge badge-info">Desain Web</span>
-                    <span class="badge badge-info">Cerdas Cermat</span>
-                </p>
-                <p>
-                  Pelaksanaan <i>Technical Meeting</i> bagi cabang lomba tingkat SMA/SMK/Sederajat se-Bali
-                </p>
-            </center>
-        </li>
-
-        <li data-date="30/10/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Technical Meeting</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                </p>
-                <p>
-                  Pelaksanaan <i>Technical Meeting</i> bagi cabang lomba kategori Mahasiswa dan Umum se-Indonesia
-                </p>
-            </center>
-        </li>
-
-        <li data-date="01/11/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Hari H Pertama ITCC 2018</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                    <span class="badge badge-info">Pemrograman</span>
-                    <span class="badge badge-info">Desain Web</span>
-                    <span class="badge badge-info">Cerdas Cermat</span>
-                </p>
-                <p>
-                  Babak final cabang lomba kategori Mahasiswa dan Umum se-Indonesia<br>
-                  Babak penyisihan bagi cabang lomba <b>Pemrograman</b> dan <b>Desain Web</b> kategori SMA/SMK/Sederajat se-Bali<br>
-                  Babak penyisihan serta semifinal 1 dan 2 bagi cabang lomba <b>Cerdas Cermat</b> kategori SMA/SMK/Sederajat se-Bali
-                </p>
-            </center>
-        </li>
-
-        <li data-date="02/11/2018">
-          <center>
-                <h2 style="color: #000; font-size: 30px;">Hari H Kedua ITCC 2018</h2>
-                <p style="font-size: 15px;">
-                    <span class="badge badge-info">Pengembangan Ide Bisnis TIK</span>
-                    <span class="badge badge-info">Pengembangan Aplikasi Android</span>
-                    <span class="badge badge-info">Pemrograman</span>
-                    <span class="badge badge-info">Desain Web</span>
-                    <span class="badge badge-info">Cerdas Cermat</span>
-                </p>
-                <p>
-                  Expo cabang lomba kategori Mahasiswa dan Umum se-Indonesia<br>
-                  Babak final bagi cabang lomba <b>Pemrograman</b> dan <b>Desain Web</b> kategori SMA/SMK/Sederajat se-Bali<br>
-                  Babak semifinal 3 dan 4 serta final bagi cabang lomba <b>Cerdas Cermat</b> kategori SMA/SMK/Sederajat se-Bali<br>
-                  Penyerahan hadiah bagi cabang lomba kategori SMA/SMK/Sederajat serta Mahasiswa dan Umum
-                </p>
-            </center>
-        </li>
-	      	
-    	</ol>
-  	</div> <!-- .events-content -->
-</section> --}}
-
-<!--==========================
-      Contact Section
-============================-->
 <section id="contact">
     <div class="container wow fadeInUp" style="padding-bottom: 60px;">
         <div class="section-header">
-          	<h3 class="section-title">Kontak</h3>
+            <h3 class="section-title">Kontak</h3>
         </div>
     </div>
 
@@ -831,27 +601,27 @@ ITCC 2018
 
         <div class="row" style="margin-bottom: 20px;">
 
-	        <div class="col-sm-12 col-md-4 twitter">
-	            <h3><b>Twitter</b> Feed</h3>
-	            <a class="twitter-timeline" data-width="360" data-height="500" data-theme="light" data-link-color="#021b79" href="https://twitter.com/itcc_udayana" style="color: #0575e6;">Tweets by ITCCUdayana</a>
-	        </div>
+          <div class="col-sm-12 col-md-4 twitter">
+              <h3><b>Twitter</b> Feed</h3>
+              <a class="twitter-timeline" data-width="360" data-height="500" data-theme="light" data-link-color="#021b79" href="https://twitter.com/itcc_udayana" style="color: #0575e6;">Tweets by ITCCUdayana</a>
+          </div>
 
-          	<div class="col-sm-12 col-md-4 facebook">
-            	<h3><b>Facebook</b> Feed</h3>
+            <div class="col-sm-12 col-md-4 facebook">
+              <h3><b>Facebook</b> Feed</h3>
 
-            	<div class="fb-page" data-href="https://www.facebook.com/ITCC.Udayana/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ITCC.Udayana/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ITCC.Udayana/" style="color: #0575e6;">ITCC Udayana</a></blockquote></div>
+              <div class="fb-page" data-href="https://www.facebook.com/ITCC.Udayana/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ITCC.Udayana/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ITCC.Udayana/" style="color: #0575e6;">ITCC Udayana</a></blockquote></div>
                  
-          	</div>
+            </div>
 
-          	<div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-4">
 
-            	<h3>Hubungi Kami</h3>
-           	 	<hr>
-            	<p>Teknologi Informasi Jimbaran <br>
-            	Gedung Teknologi Informasi-Fakultas Teknik, <br>
-            	Jalan Raya Kampus UNUD, Jimbaran, Badung, Bali</p>
-            	<hr>
-            	<p>
+              <h3>Hubungi Kami</h3>
+              <hr>
+              <p>Teknologi Informasi Jimbaran <br>
+              Gedung Teknologi Informasi-Fakultas Teknik, <br>
+              Jalan Raya Kampus UNUD, Jimbaran, Badung, Bali</p>
+              <hr>
+              <p>
                 Trio Putra (Ketua)<br>
                 081999101806 / trioputrap<br>
               </p>
@@ -861,7 +631,7 @@ ITCC 2018
               </p>
               <p><a href="https://www.facebook.com/ITCC.Udayana" target="_blank"><img style="width: 30px;" src="{{asset('asset1/images/facebook.png')}}"></a><a href="https://twitter.com/itcc_udayana" target="_blank"><img style="width: 30px;" src="{{asset('asset1/images/twitter.png')}}"></a><a href="https://www.instagram.com/itcc_udayana/" target="_blank"><img style="width: 30px;" src="{{asset('asset1/images/instagram.png')}}"></a><a href="https://ask.fm/itcc_udayana" target="_blank"><img style="width: 30px;" src="{{asset('asset1/images/Askfm.png')}}"></a><a href="https://bit.ly/ITCCUdayana" target="_blank"><img style="width: 30px;" src="{{asset('asset1/images/line.png')}}"></a></p>
                     
-          	</div>
+            </div>
 
         </div>
 
